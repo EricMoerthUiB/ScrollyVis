@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script type="text/javascript" src="./js/nifti-reader.js"></script>
+    <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
+    <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
+   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+   <script type="module" src="./js/volume-render.js"></script>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   </head>
+    <body>
+ <main>
+<div class="content content--canvas">
+			<div class="header" id="1">
+            <h1 class="header__title">Automated segmentation of endometrial cancer on MR images using deep learning</h1>
+            <p class="header__text">Erlend Hodneland, Julie A. Dybvik, Kari S. Wagner-Larsen, Veronika Šoltészová, Antonella Z. Munthe-Kaas2,4, Kristine E. Fasmer, Camilla Krakstad, Arvid Lundervold, Alexander S. Lundervold, Øyvind Salvesen, Bradley J. Erickson & Ingfrid Haldorsen</p>
+            <div id="progressContainer">
+              <div id="myProgress">
+              <div id="myBar"></div>
+             </div>
+              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+              </div>        </div>
+<div class="imageFullscreen" id="2">
+<img src="./data/11_fmri103-1.jpg"/></div>
+			<div class="headinger" id="3" style="color:#FFFFFFFF; background-color:#22222288" >
+<h2>Endometrial cancer is the most common gynecologic cancer in industrialized countries</h2>
+</div>
+			<div class="headinger" id="4" style="color:#FFFFFFFF; background-color:#22222288" >
+<h2>Patients present with early-stage disease are cured by surgery</h2>
+</div>
+			<div class="headinger" id="14" style="color:#FFFFFFFF; background-color:#22222288" >
+<h2>Preoperative imaging findings guide the surgical approach</h2>
+</div>
+			<div class="description" id="20" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+This is the result of an MR scan of the uterus
+</span></div>
+			<div class="description" id="21" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+In the middle you can see the endometrium and the tumor.<br><br>In order to perform advanced imaging analysis the region of the tumor within the endometrium needs to be marked by experts from the field of gynecological caner imaging.
+</span></div>
+			<div class="text" id="22">
+Will be replaced with a SliceVis
+</div>
+			<div class="description" id="25" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The experts have to mark the tumor on every slice to end up with a complete segmentation
+</span></div>
+			<div class="description" id="26" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+This is a very labour intensive process
+</span></div>
+			<div class="headinger" id="27" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>This is why the solution presented by Hodneland et al. is so very much needed!</h3>
+</div>
+<div class="image" id="31">
+<img src="./data/30_1 BIpRgx5FsEMhr1k2EqBKFg.gif"/></div>
+			<div class="description" id="32" style="color:#FFFFFFFF; background-color:#00000088" >
+<span>
+Hodneland et al. use a convolutional neural network for automatic tumor segmentation
+<br><br>
+Image Source: https://becominghuman.ai
+</span></div>
+			<div class="description" id="33" style="color:#FFFFFFFF; background-color:#00000088" >
+<span>
+34 patients where referred as the test data set and a tutal number of 105 patients was used for training the model
+</span></div>
+			<div class="description" id="35" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The difference between the manual and automated ML segmentation of the primary tumor is shown
+</span></div>
+			<div class="description" id="36" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Orange: true positives (ML and expert mark as tumor) <br><br> Blue: false negative (ML does not mark as tumor, expert does) <br><br> Purple: False positives (ML marks as tumor, expert does not)
+</span></div>
+			<div class="description" id="37" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+In the background the T1-weighted VIBE sequence is presented
+</span></div>
+<div class="imageFullscreen" id="38">
+<img src="./data/40_ELazznXXYAADD-U.jpg"/></div>
+			<div class="headinger" id="41" style="color:#000000FF; background-color:#FFFFFF88" >
+<h3>The work from Hodneland et al. is one step further in the direction of personalized treatment for every patient in need!</h3>
+</div>
+			<div class="headinger" id="43">
+For more information check out the  <a href="https://doi.org/10.1038/s41598-020-80068-9">Scientific Reports Paper!</a>
+</div>
+<div class="image" id="44">
+<img src="./data/45_numbers.png"/></div>
+			<div class="description" id="46" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The Boxplot presents the tumor volume measurements of rater 1, rater 2, and of the machine learning algorithm result.
+</span></div>
+			<div class="description" id="47" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+<b>No difference in median tumor volume</b>
+</span></div>
+			<div class="headinger" id="48" style="color:#FFFFFFFF; background-color:#00000000" >
+<h2>The network was able to provide a segmentation mask with human agreement not different from inter-rater agreement of human experts!</h2>
+</div>
+			<div class="description" id="49" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+This is a visualization of their results!
+</span></div>
+			<div class="text" id="54">
+Will be replaced with a SliceVis
+</div>
+</div>
+</main>
+<script type="module" src="./js/index.js"></script>
+</body>
+</html>
