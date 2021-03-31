@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script type="text/javascript" src="./js/nifti-reader.js"></script>
+    <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
+    <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
+   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+   <script type="module" src="./js/volume-render.js"></script>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   <script type="text/javascript" src="./js/videoCode.js"></script>
+   </head>
+    <body>
+ <main>
+<div class="content content--canvas">
+			<div class="header" id="1">
+            <h1 class="header__title">A Nose for the Winter</h1>
+            <p class="header__text">Story about the Polar Bear</p>
+            <div id="progressContainer">
+              <div id="myProgress">
+              <div id="myBar"></div>
+             </div>
+              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+              </div>        </div>
+<div class="imageFullscreen" id="2">
+<img src="./data/3_3_3_wildlife-amp-animals-in-norway-1.png"/></div>
+			<div class="description" id="4" style="color:#555555FF; background-color:#AAAAAA00" >
+<span>
+The polar bear is the largest bear species
+</span></div>
+			<div class="description" id="5" style="color:#555555FF; background-color:#AAAAAA00" >
+<span>
+Adult males weigh around 350-700kg
+</span></div>
+<div class="mapFullscreen" id="10">   <div id="map10"  style="width: 100%; height: 100%"></div></div>
+			<div class="headinger" id="14">
+<div>How many polar bears live in Svalbard?</div>
+			<div style="margin-top: 50px">				
+<input type="radio" id="question:500" name="question14" value="500"checked>
+				<label for="question:500">500</label>				
+<input type="radio" id="question:1000" name="question14" value="1000">
+				<label for="question:1000">1000</label>				
+<input type="radio" id="question:3000" name="question14" value="3000">
+				<label for="question:3000">3000</label>
+</div>
+</div>
+			<div class="text" id="15" style="color:#FFFFFFFF; background-color:#00000000" >
+Sorry, this is unfortunately wrong &#129488;
+
+Scroll back up and try again!
+</div>
+			<div class="text" id="16" style="color:#FFFFFFFF; background-color:#00000000" >
+Sorry, this is unfortunately wrong &#129488;
+
+Scroll back up and try again!
+</div>
+			<div class="text" id="17" style="color:#FFFFFFFF; background-color:#00000000" >
+You are absolutely right! &#128079;
+</div>
+			<div class="text" id="18" style="color:#FFFFFFFF; background-color:#00000000" >
+Actually there are more bears than humans on the island! &#128516;
+</div>
+			<div class="text" id="20" style="color:#555555FF; background-color:#AAAAAA00" >
+Let us jump to the island where many many bears are located: Svalbard!
+</div>
+			<div class="headinger" id="22" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Now we have a look at the skull of one of these majestic bears</h3>
+</div>
+			<div class="headinger" id="26">
+<div>What do you think, is that a bear?</div>
+			<div style="margin-top: 50px">				
+<input type="radio" id="question:Yes" name="question26" value="Yes"checked>
+				<label for="question:Yes">Yes</label>				
+<input type="radio" id="question:No" name="question26" value="No">
+				<label for="question:No">No</label>
+</div>
+</div>
+			<div class="headinger" id="29" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>And now the real bear skull!</h3>
+</div>
+			<div class="description" id="32" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Look at just how stunning these teeth are!
+</span></div>
+			<div class="description" id="33" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+With the elongated head it looks like an alien!
+</span></div>
+			<div class="description" id="34" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+This visualization is called ISO visualization and presents surfaces with equal values.
+</span></div>
+			<div class="description" id="36" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+In a so called slice view you can see the thin bone structures within the head.
+</span></div>
+			<div class="description" id="38" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Volume visualization is cool right &#128525;?
+</span></div>
+			<div class="description" id="39" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+These structures warm the air before the bear breathes in!
+</span></div>
+			<div class="headinger" id="40" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Perfect for the winter! ❄️</h3>
+</div>
+<div class="videoFullscreen" id="41">
+<video width="100%" id="vid41" muted controls onLoadedData = "videoLoaded(41)">
+     <source src="./data/42_42_42_Adorably Cute Polar Bear Cubs Go Sledging!.mp4" type="video/mp4"/>
+</video>
+</div>
+			<div class="headinger" id="44">
+See you soon!
+</div>
+<div class="image" id="45">
+<img src="./data/46_46_46_standard_compressed_orrfugl_94559.jpg"/></div>
+			<div class="description" id="47" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+It is an Orrfugl!
+</span></div>
+			<div class="text" id="48" style="color:#FFFFFFFF; background-color:#00000000" >
+We hope you liked our little story. Now check out these cute little bears sliding down a hill!
+</div>
+			<div class="description" id="50" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Does that look like a beak? 🤔
+</span></div>
+			<div class="description" id="51" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Is that really a bear? 🧐
+</span></div>
+			<div class="text" id="52" style="color:#FFFFFFFF; background-color:#00000000" >
+Hmm, maybe you want to check out the skull again &#128513;
+</div>
+			<div class="text" id="53" style="color:#FFFFFFFF; background-color:#00000000" >
+You are absolutely right! 🤩
+</div>
+			<div class="text" id="54" style="color:#FFFFFFFF; background-color:#00000000" >
+We viualize a heatmap on top of the map showing where bears have been spotted in Norway
+</div>
+<div class="video" id="58">
+<video width="100%" id="vid58" muted controls onLoadedData = "videoLoaded(58)">
+     <source src="./data/59_orrfugl.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="video" id="60">
+<video width="100%" id="vid60" muted controls onLoadedData = "videoLoaded(60)">
+     <source src="./data/62_bear.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="video" id="61">
+<video width="100%" id="vid61" muted controls onLoadedData = "videoLoaded(61)">
+     <source src="./data/63_bearSlice.mp4" type="video/mp4"/>
+</video>
+</div>
+</div>
+</main>
+<script type="module" src="./js/index.js"></script><script type="text/javascript" src="./js/mapCode.js"></script>
+
+</body>
+</html>
