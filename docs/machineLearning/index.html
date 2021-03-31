@@ -10,9 +10,10 @@
    <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
    <script type="module" src="./js/volume-render.js"></script>
    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   <script type="text/javascript" src="./js/videoCode.js"></script>
    </head>
     <body>
  <main>
@@ -39,11 +40,11 @@
 </div>
 			<div class="description" id="20" style="color:#FFFFFFFF; background-color:#00000000" >
 <span>
-This is the result of an MR scan of the uterus
+This is the result of an MR scan of the brain as example, because our endometrial data is confidential.<br><br>Source: <a style="inline-block" href="https://wiki.cancerimagingarchive.net/display/Public/Brain-Tumor-Progression">data</a>
 </span></div>
 			<div class="description" id="21" style="color:#FFFFFFFF; background-color:#00000000" >
 <span>
-In the middle you can see the endometrium and the tumor.<br><br>In order to perform advanced imaging analysis the region of the tumor within the endometrium needs to be marked by experts from the field of gynecological caner imaging.
+In the middle you can see the  the tumor.<br><br>In order to perform advanced imaging analysis the region of the tumor within the endometrium needs to be marked by experts.
 </span></div>
 			<div class="text" id="22">
 Will be replaced with a SliceVis
@@ -79,10 +80,6 @@ The difference between the manual and automated ML segmentation of the primary t
 <span>
 Orange: true positives (ML and expert mark as tumor) <br><br> Blue: false negative (ML does not mark as tumor, expert does) <br><br> Purple: False positives (ML marks as tumor, expert does not)
 </span></div>
-			<div class="description" id="37" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-In the background the T1-weighted VIBE sequence is presented
-</span></div>
 <div class="imageFullscreen" id="38">
 <img src="./data/40_ELazznXXYAADD-U.jpg"/></div>
 			<div class="headinger" id="41" style="color:#000000FF; background-color:#FFFFFF88" >
@@ -111,6 +108,12 @@ This is a visualization of their results!
 			<div class="text" id="54">
 Will be replaced with a SliceVis
 </div>
+<div class="image" id="56">
+<img src="./data/57_results.png"/></div>
+			<div class="description" id="58" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The result out of the paper showing the endometrium in the background.
+</span></div>
 </div>
 </main>
 <script type="module" src="./js/index.js"></script>

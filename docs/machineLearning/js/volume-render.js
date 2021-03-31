@@ -130,16 +130,19 @@ function readNifti(url, receiver) {
                 let niftiHeader = nifti.readHeader(data);
                 let volume = new Volume();
                 let image = nifti.readImage(niftiHeader, data);
-                let int8 = new Int8Array(image);
+                let int8 =  new Int8Array(image);
                 let int16 = new Int16Array(image);
                 let int32 = new Int32Array(image);
+                let float64 = new Float64Array(image);
                 let dimensions = niftiHeader.dims[1] * niftiHeader.dims[2] * niftiHeader.dims[3];
                 if (dimensions === int8.length) {
                     volume.data = int8;
                 } else if (dimensions === int16.length) {
                     volume.data = int16;
-                } else {
+                } else if(dimensions === int32.length) {
                     volume.data = int32;
+                } else {
+                    volume.data = float64
                 }
                 // get the min and max intensities
                 var min_max = volume.computeMinMax();
