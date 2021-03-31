@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script type="text/javascript" src="./js/nifti-reader.js"></script>
+    <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
+    <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
+   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+   <script type="module" src="./js/volume-render.js"></script>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   </head>
+    <body>
+ <main>
+<div class="content content--canvas">
+			<div class="header" id="1">
+            <h1 class="header__title">A story about the weather</h1>
+            <p class="header__text">By Alexandra Diehl</p>
+            <div id="progressContainer">
+              <div id="myProgress">
+              <div id="myBar"></div>
+             </div>
+              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+              </div>        </div>
+			<div class="headinger" id="2" style="color:#000000FF; background-color:#00000000" >
+<h3>Weather predictability influences many aspects of human life and constitues a <b>grand challenge</b></h3>
+</div>
+<div class="imageFullscreen" id="3">
+<img src="./data/4_image05[2235].jpg"/></div>
+			<div class="headinger" id="5" style="color:#FFFFFFFF; background-color:#22222255" >
+<h3>One severe effect of thunderstorms are rapidly developing flooding</h3>
+</div>
+<div class="imageFullscreen" id="10">
+<img src="./data/9_image07[2237].jpg"/></div>
+			<div class="headinger" id="11" style="color:#FFFFFFF; background-color:#00000000" >
+<h3>Forecasting such effects of thunderstorms is still a challenge!</h3>
+</div>
+<div class="image" id="14">
+<img src="./data/13_horne.png"/></div>
+			<div class="description" id="15" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+That's why we present you <b> Horneo </b>
+</span></div>
+			<div class="description" id="16" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Horneo is a visual analytics tool for the detection of hazardous thunderstorms and their characterization.
+</span></div>
+			<div class="headinger" id="17" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Horneos task workflow consits of four steps </h3>
+</div>
+<div class="image" id="18">
+<img src="./data/19_taskWorkflow.png"/></div>
+			<div class="description" id="20" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+These four steps have been identified together with a primary domain expert.
+</span></div>
+			<div class="headinger" id="21" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Based on the task analysis and multiple design evaluations we developed Horneo</h3>
+</div>
+			<div class="headinger" id="23">
+<div>Would you like to see some details about the implementation?</div>
+			<div style="margin-top: 50px">				
+<input type="radio" id="question:Yes" name="question23" value="Yes"checked>
+				<label for="question:Yes">Yes</label>				
+<input type="radio" id="question:No" name="question23" value="No">
+				<label for="question:No">No</label>
+</div>
+</div>
+<div class="image" id="25">
+<img src="./data/24_Implementation details.PNG"/></div>
+			<div class="description" id="26" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Horneo is composed of a backend server and a frontend client, which consumes information provided by the server.
+</span></div>
+			<div class="description" id="27" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The server provides a set of API endpoints.<br><br>
+The frontend is written in Javascript, jQuery and D3.js
+</span></div>
+			<div class="description" id="28" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The weather data originate from NEXRAD stations provided by NOAA.
+</span></div>
+			<div class="headinger" id="29" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Now we show you some use cases!</h3>
+</div>
+<div class="image" id="31">
+<img src="./data/32_stormOutbreak.PNG"/></div>
+<div class="mapFullscreen" id="33">   <div id="map33"  style="width: 100%; height: 100%"></div></div>
+			<div class="headinger" id="35" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>We analyzed a tornado outbreak extending to Savannah</h3>
+</div>
+			<div class="headinger" id="36" style="color:#FFFFFFFF; background-color:#00000000" >
+<h4>The storm took place on March 3rd, 2019 over the course of six hours, with a total of 41 tornadoes</h4>
+</div>
+			<div class="description" id="37" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The image presents an overview of the radar data for the latest time step:<br><br>
+(a) the radar reflectivity corresponding to the selected time step<br><br>
+(b) the storm cell detected by Titan at the selected time step<br><br>
+(c) the complete reflectivity intensity evolution (max dbz)<br><br>
+(d) the storm cell properties
+</span></div>
+			<div class="headinger" id="39">
+Thank you for scrolling! <br><br> Check out our paper Horneo!
+</div>
+<div class="image" id="42">
+<img src="./data/41_hail mass.PNG"/></div>
+			<div class="description" id="43" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The image shows an overview of the development of hail mass over time and space<br><br>
+(b) presents a detailed view for the selected thunderstrom<br><br>
+(c) By interactive analysis of the temporal evolution view and the storm map view, we notice two peaks associated with large hail potential
+</span></div>
+<div class="image" id="44">
+<img src="./data/45_potential.PNG"/></div>
+			<div class="description" id="46" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Finally we visualize the potential hazard for this cell by showing the probability distribution of similar past storm cells.<br>
+The probability distribution indicates a high likelihood that the storm will continue to grow in intensity and that hail mass is present.
+</span></div>
+			<div class="headinger" id="47" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Domain Expert Evaluation</h3>
+</div>
+			<div class="text" id="48" style="color:#FFFFFFFF; background-color:#00000000" >
+Domain experts found the tool suitable for their daily task workflows<br><br>
+Results from the interview showed that domain experts found the visualizations very to extremely expressive, very easy, and very useful!
+</div>
+			<div class="text" id="49" style="color:#FFFFFFFF; background-color:#00000000" >
+In the future our collaborators would like to evaluate the tool with real-time data and add additional data sets coming from sensors and numerical weather prediction models
+</div>
+			<div class="text" id="50" style="color:#FFFFFFFF; background-color:#00000000" >
+This visualization shows a storm intensity overview from blue to purple ordered by intesity
+</div>
+<div class="mapFullscreen" id="51">   <div id="map51"  style="width: 100%; height: 100%"></div></div>
+			<div class="text" id="52" style="color:#FFFFFFFF; background-color:#00000000" >
+Here we can see the hail data from 0kg to 11.2kg, from white to blue
+</div>
+</div>
+</main>
+<script type="module" src="./js/index.js"></script><script type="text/javascript" src="./js/mapCode.js"></script>
+<script type="text/javascript" src="./js/videoCode.js"></script>
+</body>
+</html>
