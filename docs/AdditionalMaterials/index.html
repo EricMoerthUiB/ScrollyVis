@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script type="text/javascript" src="./js/nifti-reader.js"></script>
+    <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
+    <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
+   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+   <script type="module" src="./js/volume-render.js"></script>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   <script type="text/javascript" src="./js/videoCode.js"></script>
+   </head>
+    <body>
+ <main>
+<div class="content content--canvas">
+			<div class="header" id="1">
+            <h1 class="header__title">ScrollyVis: Guided dynamic narratives for scientific storytelling</h1>
+            <p class="header__text">Online Submission: 1061</p>
+            <div id="progressContainer">
+              <div id="myProgress">
+              <div id="myBar"></div>
+             </div>
+              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+              </div>        </div>
+<div class="imageFullscreen" id="3">
+<img src="./data/2_DSC06379.jpg"/></div>
+			<div class="headinger" id="6" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>With ScrollyVis, we present a way to bring your story idea to life.</h3>
+</div>
+			<div class="headinger" id="7" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Authors are now able to tell guided dynamic narratives as scrollytelling websites by simply using our editor.</h3>
+</div>
+			<div class="headinger" id="8" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>The resulting websites are ready for deployment on any webserve.</h3>
+</div>
+<div class="image" id="9">
+<img src="./data/10_linear.jpg"/></div>
+			<div class="description" id="11" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+ScrollyVis supports linear narratives ...
+</span></div>
+<div class="image" id="12">
+<img src="./data/13_nonLinear.PNG"/></div>
+			<div class="description" id="14" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+... as well as non-linear narratives.
+</span></div>
+<div class="image" id="15">
+<img src="./data/16_dynamic narratives.png"/></div>
+			<div class="description" id="18" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Our editor furthermore allows authors to create guided interactive narratives.
+</span></div>
+			<div class="description" id="19" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Such narratives are especially important to increase viewer engagement.
+</span></div>
+			<div class="headinger" id="21" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Now we show you some case studies created with our editor</h3>
+</div>
+			<div class="headinger" id="22">
+<div>Choose which case study you would like to explore</div>
+			<div style="margin-top: 50px">
+<input type="radio" id="question:PolarBear" name="question22" value="PolarBear"checked>
+				<label for="question:PolarBear">PolarBear</label>
+<input type="radio" id="question:Machine Learning Segmentation" name="question22" value="Machine Learning Segmentation">
+				<label for="question:Machine Learning Segmentation">Machine Learning Segmentation</label>
+<input type="radio" id="question: A Story About The Weather" name="question22" value=" A Story About The Weather">
+				<label for="question: A Story About The Weather"> A Story About The Weather</label>
+</div>
+</div>
+<div class="image" id="24">
+<img src="./data/23_polarBear.PNG"/></div>
+<div class="image" id="25">
+<img src="./data/26_MachineLearning.PNG"/></div>
+<div class="image" id="27">
+<img src="./data/28_hornero.PNG"/></div>
+			<div class="description" id="29" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Together with the curator of the modern osteological collection at the University Museum of Bergen we created a story  focused on outreach activities
+</span></div>
+			<div class="description" id="30" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+This story focuses on presenting results of a publication on automated segmentation of endometrail cancer imaging data in magnetic resonance using deep learning
+</span></div>
+			<div class="description" id="31" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+This story is about an visual analytics tool for the detection of hazardous thunderstorms and their characterization. The accepted paper about the tool is called Hornero and will appear shortly.
+</span></div>
+			<div class="headinger" id="39" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>Now we will present you some details about our approach!
+<br><br><br>
+If you would like to check another case study, just scroll back up 😉</h3>
+</div>
+<div class="videoFullscreen" id="41">
+<video width="100%" id="vid41" muted controls onLoadedData = "videoLoaded(41)">
+     <source src="./data/44_polarBear.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="videoFullscreen" id="42">
+<video width="100%" id="vid42" muted controls onLoadedData = "videoLoaded(42)">
+     <source src="./data/45_machineLearning.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="videoFullscreen" id="43">
+<video width="100%" id="vid43" muted controls onLoadedData = "videoLoaded(43)">
+     <source src="./data/46_AStoryAboutTheWeather.mp4" type="video/mp4"/>
+</video>
+</div>
+			<div class="description" id="47" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The story primarily focuses on polar bears living in Norway.<br><br>
+Next we show the story in video format.
+</span></div>
+			<div class="description" id="48" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+The authors introduces an automatic approach to create the segmentation mask. <br><br>
+Next we show the story in video format.
+</span></div>
+			<div class="description" id="49" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+In this story we are including custom code presenting the reults of Hornero.<br><br>Next we show the story in video format.
+</span></div>
+			<div class="headinger" id="50" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>There are as many stories to tell as stars in the sky!</h3>
+</div>
+<div class="imageFullscreen" id="51">
+<img src="./data/52_new - Copy (2).png"/></div>
+<div class="imageFullscreen" id="53">
+<img src="./data/56_new - Copy.png"/></div>
+<div class="imageFullscreen" id="54">
+<img src="./data/55_new.png"/></div>
+<div class="image" id="57">
+<img src="./data/58_nodeBalancerFirst.PNG"/></div>
+			<div class="description" id="59" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+We introduce a story segment balancer to ensure a consistent story length
+</span></div>
+<div class="image" id="60">
+<img src="./data/61_nodeBalancerSecond.PNG"/></div>
+			<div class="description" id="62" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Story segments of shorter branches are adapted on demand.
+</span></div>
+<div class="image" id="63">
+<img src="./data/64_nodeDark.png"/></div>
+			<div class="description" id="65" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Various content is presentable
+</span></div>
+<div class="image" id="66">
+<img src="./data/68_implementationstructureDark.png"/></div>
+			<div class="description" id="67" style="color:#FFFFFFFF; background-color:#00000000" >
+<span>
+Our editor exports ready to deploy websites, including everything needed in one zip file!
+</span></div>
+			<div class="headinger" id="69" style="color:#FFFFFFFF; background-color:#00000000" >
+<h3>We hope you are now as excited as we are!</h3>
+</div>
+			<div class="headinger" id="70">
+Check out our paper ScrollyVis!
+</div>
+			<div class="text" id="75" style="color:#FFFFFFFF; background-color:#00000000" >
+				<span>
+The three case studies are also available online at:
+<a style="display: inline" href="https://ericmoerthuib.github.io/ScrollyVis/">https://ericmoerthuib.github.io/ScrollyVis/</a></span>
+</div>
+</div>
+</main>
+<script type="module" src="./js/index.js"></script>
+</body>
+</html>

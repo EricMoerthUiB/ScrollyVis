@@ -1,0 +1,619 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    scrollbar-color: dark;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    scrollbar-color: dark;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0071a8;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+    font-size: 80%;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 15px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    --color-text: #fff;
+    --color-bg: #000;
+    --color-link: #697c7e;
+    --color-link-hover: #fff;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 15000px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-link-hover);
+    outline: none;
+}
+
+.frame {
+    padding: 3rem 5vw;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.frame__title {
+    font-size: 1rem;
+    margin: 0 0 1rem;
+    font-weight: normal;
+}
+
+.frame__links {
+    display: inline;
+}
+
+.frame__github,
+.frame__links a:not(:last-child),
+.frame__demos a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.frame__demos {
+    margin: 1rem 0;
+}
+
+.frame__demo--current,
+.frame__demo--current:hover {
+    text-decoration: underline;
+    color: var(--color-link);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    will-change: opacity;
+    opacity: 0;
+}
+
+.header__title {
+    width: 70%;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    letter-spacing: 0.12rem;
+    background: linear-gradient(40deg, #fdf680 0%, #d6716d 50%, #a0fafb 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 100;
+}
+
+.header__text {
+    width: 60%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #393c46;
+}
+
+.headinger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    /*top: 35%;*/
+    line-height: 1.2;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    max-width: calc(60% - 80px);
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+    padding: 0 40px;
+}
+
+.headinger h1 {
+    line-height: 1.2;
+    font-size: 4.0vw;
+}
+
+.headinger h2 {
+    line-height: 1.2;
+    font-size: 3.5vw;
+}
+
+.headinger h3 {
+    line-height: 1.2;
+    font-size: 2.5vw;
+}
+
+.headinger h4 {
+    line-height: 1.2;
+    font-size: 2.0vw;
+}
+
+.text {
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    top: 0;
+    line-height: 1.2;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    max-width: calc(50%);
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    /*transform: translateY(100%);*/
+    padding: 0 40px;
+}
+
+.map {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    top: 0;
+    text-align: center;
+    width: 1200px;
+    height: 650px;
+    max-width: calc(70%);
+    max-height: calc(70%);
+    left: 40%;
+    top: 15%;
+    transform: translateX(-50%);
+    /*transform: translateY(100%);*/
+    padding: 0 40px;
+}
+
+.mapFullscreen {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    vertical-align: middle;
+    text-align: center;
+    max-width: calc(60%);
+    /*max-height: calc(80%);*/
+    left: 10%;
+    min-width: 50%;
+    /*transform: translateX(-50%);*/
+    /*transform: translateY(100%);*/
+    padding: 0 40px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageFullscreen {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.imageFullscreen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    top: 0;
+    text-align: center;
+    max-width: calc(70%);
+    left: 40%;
+    top: 20%;
+    transform: translateX(-50%);
+    /*transform: translateY(100%);*/
+    padding: 0 40px;
+}
+
+.videoFullscreen {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    /*max-width: calc(70%);*/
+    left: 0;
+}
+
+.description {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    line-height: 1.2;
+    font-size: 1.6rem;
+    text-align: left;
+    color: white;
+    /*width: fit-content;*/
+    left: 80%;
+    transform: translateX(-50%);
+    max-width: calc(35% - 80px);
+    padding: 0 40px;
+}
+
+
+@media screen and (min-width: 53em) {
+    .message {
+        display: none;
+    }
+
+    .frame {
+        position: fixed;
+        text-align: left;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        display: grid;
+        align-content: space-between;
+        width: 100%;
+        max-width: none;
+        height: 100vh;
+        padding: 2rem 2.25rem;
+        pointer-events: none;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 'title title ... ' '... ... ...' 'github demos links';
+    }
+
+    .frame__title-wrap {
+        grid-area: title;
+        display: flex;
+    }
+
+    .frame__title {
+        margin: 0;
+    }
+
+    .frame__github {
+        grid-area: github;
+        justify-self: start;
+        margin: 0;
+    }
+
+    .frame__demos {
+        margin: 0;
+        grid-area: demos;
+        justify-self: center;
+    }
+
+    .frame__links {
+        grid-area: links;
+        padding: 0;
+        justify-self: end;
+    }
+
+    .frame a {
+        pointer-events: auto;
+    }
+
+    .header__title {
+        font-size: 4vw;
+        letter-spacing: 0.5vw;
+    }
+
+    .heading {
+        line-height: 1.2;
+        font-size: 2.5vw;
+    }
+
+}
+
+
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+input[type=radio] {
+    display: none;
+    margin: 10px;
+}
+
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+input[type=radio] + label {
+    display: inline-block;
+    margin: 5px;
+    padding: 4px 12px;
+    background-color: #2e2e2e;
+    border-color: #3d3d3d;
+}
+
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label {
+    background-image: none;
+    background-color: #334566;
+}
+
+#progressContainer {
+    margin-top: 20px;
+    width: 10%;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: #242424;
+}
+
+#myBar {
+    width: 1%;
+    height: 10px;
+    background-color: #0071a8;
+}
+
+#ami {
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
