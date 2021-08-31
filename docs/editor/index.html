@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ScrollyVis Editor</title>
+    <meta name="description"
+          content="Simple library for flow programming. Drawflow allows you to create data flows easily and quickly.">
+<!--    <script src="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.js"></script>-->
+<!--    <script type="module" src="../Drawflow/dist/drawflow.min.js"></script>-->
+    <script type="module" src="js/drawflow.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="drawflow.css"/>
+    <link rel="stylesheet" type="text/css" href="beautiful.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<!--    Map-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+    <!-- Load the `mapbox-gl-geocoder` plugin. -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+<!--    END MAP-->
+
+<!--    Begin Volume-->
+    <script type="text/javascript" src="web/js/nifti-reader.js"></script>
+    <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
+    <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
+    <script type="module" src="web/js/volume-render.js"></script>
+<!--    <script type="text/javascript" src="js/arcball.js"></script>-->
+    <script type="text/javascript" src="js/arcball.min.js"></script>
+<!--END Volume-->
+    <script type="text/javascript" src="js/jszip.min.js"></script>
+    <script type="text/javascript" src="js/drawflowTemplate.js"></script>
+<!--    <script type="module" src="js/index.js"></script>-->
+    <script type="module" src="js/index.min.js"></script>
+</head>
+<body>
+
+<!--inspiration:-->
+<!--https://github.com/jerosoler/Drawflow/blob/master/docs/index.html-->
+<header>
+    <h2>ScrollyVis Editor</h2>
+</header>
+<div class="wrapper">
+    <div class="col">
+        <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="text">
+            <img src="resources/Text.png" class="draggNode" draggable="false">
+        </div>
+        <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="image">
+            <img src="resources/Image.png" class="draggNode" draggable="false">
+        </div>
+
+        <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="video">
+            <img src="resources/Video.png" class="draggNode" draggable="false">
+        </div>
+
+        <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="subtext">
+            <img src="resources/subtext.jpg" class="draggNode" draggable="false">
+        </div>
+        <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="map">
+            <img src="resources/map.png" class="draggNode" draggable="false">
+        </div>
+
+        <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="volvis">
+            <img src="resources/volume.png" class="draggNode" draggable="false">
+        </div>
+        <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="decision">
+            <img src="resources/decision.png" class="draggNode" draggable="false">
+        </div>
+    </div>
+    <div class="col-right">
+        <div id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="btn-export" id="exportButton"
+                 onclick="if(this.className.indexOf('disabled') === -1){exportData()}">Export
+            </div>
+            <div class="btn-clear" onclick="editor.clearModuleSelected()">Clear</div>
+            <div class="btn-copyToClipboard" onclick="copyToClipboard()">Copy</div>
+            <div class="btn-lock">
+                <i id="lock" class="fas fa-lock" onclick="editor.editor_mode='fixed'; changeMode('lock');"></i>
+                <i id="unlock" class="fas fa-lock-open" onclick="editor.editor_mode='edit'; changeMode('unlock');"
+                   style="display:none;"></i>
+            </div>
+            <div class="bar-zoom">
+                <i class="fas fa-search-minus" onclick="editor.zoom_out()"></i>
+                <i class="fas fa-search" onclick="editor.zoom_reset()"></i>
+                <i class="fas fa-search-plus" onclick="editor.zoom_in()"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
