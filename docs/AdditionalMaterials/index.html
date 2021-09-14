@@ -4,6 +4,7 @@
     <meta charset="utf-8">
 <!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
     <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/tree.css" />
     <script type="text/javascript" src="./js/nifti-reader.js"></script>
     <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
     <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
@@ -13,166 +14,295 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
    <script type="text/javascript" src="./js/videoCode.js"></script>
-   </head>
+    <style>
+    body:after{
+     content: url("./data/3_2_DSC06379.jpg") url("./data/5_Editor.png") url("./data/7_Editor2.png") url("./data/9_Editor32.png") url("./data/11_16_dynamic narratives.png") url("./data/15_ScrollyVis Editor Tutorial.mp4") url("./data/32_Result.png") url("./data/18_23_polarBear.PNG") url("./data/21_ANoseForTheWinter.mp4") url("./data/25_28_hornero.PNG") url("./data/27_AStoryAboutTheWeather.mp4") url("./data/22_26_MachineLearning.PNG") url("./data/24_MachineLearning.mp4")
+    }
+    </style>   </head>
     <body>
  <main>
 <div class="content content--canvas">
-			<div class="header" id="1">
+			<div class="header" id="2">
             <h1 class="header__title">ScrollyVis: Guided dynamic narratives for scientific storytelling</h1>
-            <p class="header__text">Online Submission: 1061</p>
+            <p class="header__text">TVCG Submission</p>
             <div id="progressContainer">
               <div id="myProgress">
               <div id="myBar"></div>
              </div>
               <div id="done" style="margin-left: 40%; opacity: 0">done</div>
               </div>        </div>
-<div class="imageFullscreen" id="3">
-<img src="./data/2_DSC06379.jpg"/></div>
-			<div class="headinger" id="6" style="color:#FFFFFFFF; background-color:#00000000" >
-<h3>With ScrollyVis, we present a way to bring story ideas to life.</h3>
-</div>
-			<div class="headinger" id="7" style="color:#FFFFFFFF; background-color:#00000000" >
-<h3>This enables authors to tell guided dynamic narratives in scrollytelling-form by simply using our editor.</h3>
-</div>
-			<div class="headinger" id="8" style="color:#FFFFFFFF; background-color:#00000000" >
-<h3>Exported websites are ready for deployment on any webserver.</h3>
-</div>
-<div class="image" id="9">
-<img src="./data/10_linear.jpg"/></div>
-			<div class="description" id="11" style="color:#FFFFFFFF; background-color:#00000000" >
+<div class="imageFullscreen left" id="3">
+<img src="./data/3_2_DSC06379.jpg"/></div>
+			<div class="subtext center center l" id="4" style="color:#FFFFFF; background-color:#88888800; width: 60%" >
+			<span style='width: 100%'>
+				There are as many stories to tell as stars in the sky!
+			</span>
+			</div>
+<div class="imageFullscreen left" id="5">
+<img src="./data/5_Editor.png"/></div>
+			<div class="subtext center center l" id="6" style="color:#FFFFFF; background-color:#88888800; width: 60%" >
+			<span style='width: 100%'>
+				With ScrollyVis, we present a way to bring story ideas to life.
+			</span>
+			</div>
+<div class="imageFullscreen left" id="7">
+<img src="./data/7_Editor2.png"/></div>
+			<div class="subtext center center m" id="8" style="color:#FFFFFF; background-color:#88888800; width: 40%; margin-left: 120px" >
+			<span style='width: 100%'>
+				This enables authors to tell guided dynamic narratives in scrollytelling-form by simply using our editor.
+			</span>
+			</div>
+<div class="imageFullscreen left" id="9">
+<img src="./data/9_Editor32.png"/></div>
+			<div class="subtext center center m" id="10" style="color:#FFFFFF; background-color:#88888800; width: 40%; margin-left: 120px" >
+			<span style='width: 100%'>
+				Exported websites are ready for deployment on any webserver.
+			</span>
+			</div>
+<div class="image left" id="11">
+<img src="./data/11_16_dynamic narratives.png"/></div>
+			<div class="subtext center right m" id="12" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Our editor allows authors to create guided interactive narratives.
+			</span>
+			</div>
+			<div class="subtext center right m" id="13" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Such narratives are especially important to increase viewer engagement.
+			</span>
+			</div>
+			<div class="text l" id="14" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-ScrollyVis supports linear narratives ...
+Now, we will show you an introduction video to the editor
 </span></div>
-<div class="image" id="12">
-<img src="./data/13_nonLinear.PNG"/></div>
-			<div class="description" id="14" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-... as well as nonlinear narratives.
-</span></div>
-<div class="image" id="15">
-<img src="./data/16_dynamic narratives.png"/></div>
-			<div class="description" id="18" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-Our editor also allows authors to create guided interactive narratives.
-</span></div>
-			<div class="description" id="19" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-Such narratives are especially important to increase viewer engagement.
-</span></div>
-			<div class="headinger" id="21" style="color:#FFFFFFFF; background-color:#00000000" >
-<h3>Next, we will demonstrate three case studies created with our editor</h3>
+<div class="videoFullscreen left" id="15">
+<video width="100%" id="vid15" muted controls onLoadedData = "videoLoaded(15)">
+     <source src="./data/15_ScrollyVis Editor Tutorial.mp4" type="video/mp4"/>
+</video>
 </div>
-			<div class="headinger" id="22">
+			<div class="text m" id="30" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+To demonstrate the utility of our approach we condected a user evaluation with 12 participants
+</span></div>
+			<div class="text m" id="31" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Here are the results:
+</span></div>
+<div class="image left" id="32">
+<img src="./data/32_Result.png"/></div>
+			<div class="subtext center right m" id="33" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Overall the editor got very good feedback!
+			</span>
+			</div>
+			<div class="text m" id="16" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Next, we will demonstrate three case studies created with our editor
+</span></div>
+			<div class="headinger" id="17">
 <div>Select which case study you would like to see</div>
 			<div style="margin-top: 50px">
-<input type="radio" id="question:PolarBear" name="question22" value="PolarBear"checked>
-				<label for="question:PolarBear">The Polar Bear: A Nose for Winter</label>
-<input type="radio" id="question:Machine Learning Segmentation" name="question22" value="Machine Learning Segmentation">
-				<label for="question:Machine Learning Segmentation">Machine Learning-based Segmentation</label>
-<input type="radio" id="question: A Story About The Weather" name="question22" value=" A Story About The Weather">
-				<label for="question: A Story About The Weather">A Story About the Weather</label>
+<input type="radio" id="question17:The Polar Bear: A Nose for Winter" name="question17" value="The Polar Bear: A Nose for Winter" checked>
+				<label for="question17:The Polar Bear: A Nose for Winter">The Polar Bear: A Nose for Winter</label>
+<input type="radio" id="question17:Machine Learning-based Segmentation" name="question17" value="Machine Learning-based Segmentation">
+				<label for="question17:Machine Learning-based Segmentation">Machine Learning-based Segmentation</label>
+<input type="radio" id="question17:A Story About the Weather" name="question17" value="A Story About the Weather">
+				<label for="question17:A Story About the Weather">A Story About the Weather</label>
 </div>
 </div>
-<div class="image" id="24">
-<img src="./data/23_polarBear.PNG"/></div>
-<div class="image" id="25">
-<img src="./data/26_MachineLearning.PNG"/></div>
-<div class="image" id="27">
-<img src="./data/28_hornero.PNG"/></div>
-			<div class="description" id="29" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-Together with the curator of the modern osteological collection at the University Museum of Bergen, we created a story focused on outreach activities
-</span></div>
-			<div class="description" id="30" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-This story presents results of a publication on automated segmentation of endometrial cancer imaging data in Magnetic Resonance Imaging using deep learning
-</span></div>
-			<div class="description" id="31" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-This story is about a visual analytics tool for detection and characterization of hazardous thunderstorms. A paper about this tool is entitled Hornero and is accepted to appear.
-</span></div>
-			<div class="headinger" id="39" style="color:#FFFFFFFF; background-color:#00000000" >
-<h3>Now we will share more details about our approach!
-<br><br><br>
-If you want to check another case study first, just scroll back up 😉</h3>
-</div>
-<div class="videoFullscreen" id="41">
-<video width="100%" id="vid41" muted controls onLoadedData = "videoLoaded(41)">
-     <source src="./data/44_polarBear.mp4" type="video/mp4"/>
-</video>
-</div>
-<div class="videoFullscreen" id="42">
-<video width="100%" id="vid42" muted controls onLoadedData = "videoLoaded(42)">
-     <source src="./data/45_machineLearning.mp4" type="video/mp4"/>
-</video>
-</div>
-<div class="videoFullscreen" id="43">
-<video width="100%" id="vid43" muted controls onLoadedData = "videoLoaded(43)">
-     <source src="./data/46_AStoryAboutTheWeather.mp4" type="video/mp4"/>
-</video>
-</div>
-			<div class="description" id="47" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-This story primarily focuses on polar bears in Svalbard.<br><br>
+<div class="image left" id="18">
+<img src="./data/18_23_polarBear.PNG"/></div>
+			<div class="subtext center right m" id="19" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Together with the curator of the modern osteological collection at the University Museum of Bergen, we created a story focused on outreach activities
+			</span>
+			</div>
+			<div class="subtext center right m" id="20" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				This story primarily focuses on polar bears in Svalbard.
+
 Next we show this story in video format.
-</span></div>
-			<div class="description" id="48" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-The authors introduce an automatic approach to create a segmentation mask.<br><br>
-Next we show this story in video format.
-</span></div>
-			<div class="description" id="49" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-In this story, we include custom code from the Hornero tool.<br><br>
-Next we show the story in video format.
-</span></div>
-			<div class="headinger" id="50" style="color:#FFFFFFFF; background-color:#00000000" >
-<h3>There are as many stories to tell as stars in the sky!</h3>
+			</span>
+			</div>
+<div class="videoFullscreen left" id="21">
+<video width="100%" id="vid21" muted controls onLoadedData = "videoLoaded(21)">
+     <source src="./data/21_ANoseForTheWinter.mp4" type="video/mp4"/>
+</video>
 </div>
-<div class="imageFullscreen" id="51">
-<img src="./data/52_new - Copy (2).png"/></div>
-<div class="imageFullscreen" id="53">
-<img src="./data/56_new - Copy.png"/></div>
-<div class="imageFullscreen" id="54">
-<img src="./data/55_new.png"/></div>
-<div class="image" id="57">
-<img src="./data/58_nodeBalancerFirst.PNG"/></div>
-			<div class="description" id="59" style="color:#FFFFFFFF; background-color:#00000000" >
+			<div class="text l" id="34" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-We introduce a story segment balancing mechanism to ensure a consistent story length
-</span></div>
-<div class="image" id="60">
-<img src="./data/61_nodeBalancerSecond.PNG"/></div>
-			<div class="description" id="62" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-Story segment lengths of shorter branches are adapted dynamically.
-</span></div>
-<div class="image" id="63">
-<img src="./data/64_nodeDark.png"/></div>
-			<div class="description" id="65" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-It is possible to present a variety of content.
-</span></div>
-<div class="image" id="66">
-<img src="./data/68_implementationstructureDark.png"/></div>
-			<div class="description" id="67" style="color:#FFFFFFFF; background-color:#00000000" >
-<span>
-Our editor exports ready to deploy websites, batteries included, in a single zip file!
-</span></div>
-			<div class="headinger" id="69" style="color:#FFFFFFFF; background-color:#00000000" >
-<h3>We hope you are as excited to share your stories as we are!</h3>
-</div>
-			<div class="headinger" id="70">
 Learn more in our paper ScrollyVis!
+</span></div>
+<div class="image left" id="25">
+<img src="./data/25_28_hornero.PNG"/></div>
+			<div class="subtext center right m" id="26" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				This story is about a visual analytics tool for detection and characterization of hazardous thunderstorms. A paper about this tool is entitled Hornero.
+			</span>
+			</div>
+			<div class="subtext center right m" id="29" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				In this story, we include custom code from the Hornero tool.
+
+Next we show the story in video format.
+			</span>
+			</div>
+<div class="videoFullscreen left" id="27">
+<video width="100%" id="vid27" muted controls onLoadedData = "videoLoaded(27)">
+     <source src="./data/27_AStoryAboutTheWeather.mp4" type="video/mp4"/>
+</video>
 </div>
-			<div class="text" id="75" style="color:#FFFFFFFF; background-color:#00000000" >
-				<span>
-These three case studies are also available online via:
-<a style="display: inline" href="https://ericmoerthuib.github.io/ScrollyVis/">https://ericmoerthuib.github.io/ScrollyVis/</a></span>
+			<div class="text l" id="36" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Learn more in our paper ScrollyVis!
+</span></div>
+<div class="image left" id="22">
+<img src="./data/22_26_MachineLearning.PNG"/></div>
+			<div class="subtext center right m" id="23" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				This story presents results of a publication on automated segmentation of endometrial cancer imaging data in Magnetic Resonance Imaging using deep learning
+			</span>
+			</div>
+			<div class="subtext center right m" id="28" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				The authors introduce an automatic approach to create a segmentation mask.
+
+Next we show this story in video format.
+			</span>
+			</div>
+<div class="videoFullscreen left" id="24">
+<video width="100%" id="vid24" muted controls onLoadedData = "videoLoaded(24)">
+     <source src="./data/24_MachineLearning.mp4" type="video/mp4"/>
+</video>
 </div>
+			<div class="text l" id="35" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Learn more in our paper ScrollyVis!
+</span></div>
+        <div class="treeHolder">
+            <div class="tree">
+                 <ul>
+                    <li>
+                        <div class="circle active" id="c2"><i class="fas fa-play fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c3"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c5"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c7"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c9"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c11"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c14"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c15"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c30"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c31"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c32"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c16"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+<ul><li>                             <div class="circle" id="c17"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
+
+<ul><li>                             <div class="circle" id="c18"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c21"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c34"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+</li><li>                             <div class="circle" id="c22"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c24"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c35"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+</li><li>                             <div class="circle" id="c25"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c27"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c36"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+</li></li></ul>
+                 </li>
+            </ul>
+
+           </div></div>
+
 </div>
 </main>
 <script type="module" src="./js/index.js"></script>
+<script type="module" src="./js/mapCode.js"></script>
+
 </body>
 </html>
