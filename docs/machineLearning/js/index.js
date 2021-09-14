@@ -1,5 +1,6 @@
 import * as RENDER from "../js/volume-render.js"
 import * as VOLUME_LOADER from "./loadData.js"
+import * as MAP from "./mapCode.js"
 import * as INSTANCES_LOADER from "./instances.js"
 import {groupLength, groups} from "./loadData.js";
 import * as LoadData from "./loadData.js";
@@ -12,7 +13,7 @@ var len;
 var start;
 uos(0, 1, p => render());
 [_renderer, _scene, _camera] = RENDER.volume_render_init(render);
-VOLUME_LOADER.loadVolumeData(_scene);
+VOLUME_LOADER.loadVolumeData(_scene, _camera);
 [start, instances, once, len] = INSTANCES_LOADER.getInstances(_camera);
 document.getElementsByTagName('body')[0].style.minHeight = len * 2000 + "px";
 document.getElementsByTagName('body')[0].style.overflow = "hidden";
@@ -22,7 +23,16 @@ const transitionBegin = 0;
 const transitionEnd = transitionBegin + step;
 
 uos(transitionBegin, transitionEnd, p => instances[start](p));
-
+scroll = 1050;
+document.addEventListener('keydown', (e) => {
+    if(e.code == "ArrowRight"){
+        scroll = scroll + 1985;
+        window.scrollTo({top:scroll, left: 0, behavior: 'smooth'});
+    }else if(e.code == "ArrowLeft"){
+        scroll = scroll - 1985;
+        window.scrollTo({top:scroll, left: 0, behavior: 'smooth'});
+    }
+});
 function render() {
     if (_renderer != null) {
         _renderer.render(_scene, _camera);
@@ -41,8 +51,9 @@ requestAnimationFrame(() => {
         document.getElementsByTagName('body')[0].style.position = "relative";
     } else {
         (function asyncLoop() {
-            elem.style.width = 100 * (groups.length / groupLength) + "%";
-            if (groups.length < groupLength) {
+            elem.style.width = 100 * ((groups.length + MAP.maps.length) / (groupLength + MAP.mapSize)) + "%";
+            // console.log("MAP " + MAP.maps.length + " m " + MAP.mapSize);
+            if (groups.length < groupLength || MAP.maps.length < MAP.mapSize) {
                 setTimeout(asyncLoop, 10);
             } else {
                 document.getElementById("done").style.opacity = "1";

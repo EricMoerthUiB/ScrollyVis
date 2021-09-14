@@ -2,159 +2,358 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
-    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/tree.css" />
     <script type="text/javascript" src="./js/nifti-reader.js"></script>
     <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
     <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
-    <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
-    <script type="module" src="./js/volume-render.js"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+   <script type="module" src="./js/volume-render.js"></script>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
-    <script type="text/javascript" src="./js/videoCode.js"></script>
-</head>
-<body>
-<main>
-    <div class="content content--canvas">
-        <div class="header" id="1">
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+   <script type="text/javascript" src="./js/videoCode.js"></script>
+    <style>
+    body:after{
+     content: url("./data/6_3_3_wildlife-amp-animals-in-norway-1.png") url("./data/26_46_46_standard_compressed_orrfugl_94559.jpg") url("./data/30_46_46_standard_compressed_orrfugl_94559.jpg") url("./data/52_42_42_Adorably Cute Polar Bear Cubs Go Sledging!.mp4")
+    }
+    </style>   </head>
+    <body>
+ <main>
+<div class="content content--canvas">
+			<div class="header" id="2">
             <h1 class="header__title">A Nose for the Winter</h1>
             <p class="header__text">Story about the Polar Bear</p>
             <div id="progressContainer">
-                <div id="myProgress">
-                    <div id="myBar"></div>
-                </div>
-                <div id="done" style="margin-left: 40%; opacity: 0">done</div>
-            </div>
-        </div>
-        <div class="imageFullscreen" id="2">
-            <img src="./data/3_3_wildlife-amp-animals-in-norway-1.png"/></div>
-        <div class="description" id="4" style="color:#555555FF; background-color:#AAAAAA00">
+              <div id="myProgress">
+              <div id="myBar"></div>
+             </div>
+              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+              </div>        </div>
+<div class="imageFullscreen left" id="6">
+<img src="./data/6_3_3_wildlife-amp-animals-in-norway-1.png"/></div>
+			<div class="subtext center right m" id="7" style="color:#000000; background-color:#a1e1e155" >
+			<span style='width: 100%'>
+				The polar bear is the largest bear species
+			</span>
+			</div>
+			<div class="subtext center right m" id="8" style="color:#000000; background-color:#a1e1e155" >
+			<span style='width: 100%'>
+				Adult males weigh around 350-700kg
+			</span>
+			</div>
+			<div class="subtext center center l" id="9" style="color:#000000; background-color:#a1e1e155" >
+			<span style='width: 100%'>
+				Let us jump to the island where many many bears are located: Svalbard!
+			</span>
+			</div>
+<div class="mapFullscreen" id="10">   <div id="map10"  style="width: 100%; height: 100%"></div></div>
+			<div class="subtext center right m" id="11" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Welcome to Longyearbyen
+			</span>
+			</div>
+<div class="mapFullscreen" id="58">   <div id="map58"  style="width: 100%; height: 100%"></div></div>
+			<div class="subtext center right m" id="59" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Here you can see an overview of all bear sightings in Svalbard and surroundings.
+			</span>
+			</div>
+			<div class="headinger" id="12">
+<div>How many polar bears live in Svarlbard?</div>
+			<div style="margin-top: 50px">
+<input type="radio" id="question12:500" name="question12" value="500"checked>
+				<label for="question12:500">500</label>
+<input type="radio" id="question12:1000" name="question12" value="1000">
+				<label for="question12:1000">1000</label>
+<input type="radio" id="question12:3000" name="question12" value="3000">
+				<label for="question12:3000">3000</label>
+</div>
+</div>
+			<div class="text m" id="13" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-The polar bear is the largest bear species
+Sorry, this is unfortunately wrong 🧐 Scroll back up and try again!
 </span></div>
-        <div class="description" id="5" style="color:#555555FF; background-color:#AAAAAA00">
+			<div class="text m" id="15" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-Adult males weigh around 350-700kg
+You are absolutely right! 👏
 </span></div>
-        <div class="mapFullscreen" id="10">
-            <div id="map10" style="width: 100%; height: 100%"></div>
-        </div>
-        <div class="headinger" id="14">
-            <div>How many polar bears live in Svalbard?</div>
-            <div style="margin-top: 50px">
-                <input type="radio" id="question:500" name="question14" value="500" checked>
-                <label for="question:500">500</label>
-                <input type="radio" id="question:1000" name="question14" value="1000">
-                <label for="question:1000">1000</label>
-                <input type="radio" id="question:3000" name="question14" value="3000">
-                <label for="question:3000">3000</label>
-            </div>
-        </div>
-        <div class="text" id="15" style="color:#FFFFFFFF; background-color:#00000000">
-            Sorry, this is unfortunately wrong &#129488;
+			<div class="text m" id="16" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Actually there are more bears than humans on the island! 😄
+</span></div>
+			<div class="text xl" id="17" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Now we have a look at the skull of one of these majestic bears
+</span></div>
+			<div class="subtext center right m" id="22" style="color:#FFFFFF; background-color:#88888855" >
+			<span style='width: 100%'>
+				Does that look like a beak? 🤔
+			</span>
+			</div>
+			<div class="subtext center right m" id="23" style="color:#FFFFFF; background-color:#88888855" >
+			<span style='width: 100%'>
+				Is that really a bear? 🧐
+			</span>
+			</div>
+			<div class="headinger" id="24">
+<div>What do you think, is that a bear?</div>
+			<div style="margin-top: 50px">
+<input type="radio" id="question24:Yes" name="question24" value="Yes"checked>
+				<label for="question24:Yes">Yes</label>
+<input type="radio" id="question24:No" name="question24" value="No">
+				<label for="question24:No">No</label>
+</div>
+</div>
+			<div class="text m" id="25" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Hmm, maybe you want to check out the skull again 😁
+</span></div>
+<div class="image left" id="26">
+<img src="./data/26_46_46_standard_compressed_orrfugl_94559.jpg"/></div>
+			<div class="subtext center right m" id="27" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				It is an Orrfugl!
+			</span>
+			</div>
+			<div class="text m" id="29" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+You are absolutely right! 🤩
+</span></div>
+<div class="image left" id="30">
+<img src="./data/30_46_46_standard_compressed_orrfugl_94559.jpg"/></div>
+			<div class="subtext center right m" id="31" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				It is an Orrfugl!
+			</span>
+			</div>
+			<div class="text xl" id="32" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+And now the real bear skull!
+</span></div>
+			<div class="subtext bottom center m" id="35" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Look at just how stunning these teeth are!
+			</span>
+			</div>
+			<div class="subtext bottom center m" id="37" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				With the elongated head it looks like an alien!
+			</span>
+			</div>
+			<div class="subtext bottom left m" id="39" style="color:#FFFFFF; background-color:#88888855" >
+			<span style='width: 100%'>
+				This visualization is called ISO visualization and presents surfaces with equal values. Scroll to see the effect if we change the value.
+			</span>
+			</div>
+			<div class="subtext bottom center m" id="41" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Now the surface is not fully present any more! Let's go back 🤗
+			</span>
+			</div>
+			<div class="subtext bottom center m" id="43" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Volume visualization is cool right 😍?
+			</span>
+			</div>
+			<div class="subtext center right m" id="45" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				In a so called slice view you can see the thin bone structures within the head.
+			</span>
+			</div>
+			<div class="subtext center right m" id="47" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				The following structures warm the air for the bear!
+			</span>
+			</div>
+			<div class="subtext center right m" id="49" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Perfect for the winter! ❄️
+			</span>
+			</div>
+			<div class="text m" id="51" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+We hope you liked our little story. Now check out these cute little bears sliding down a hill!
+</span></div>
+<div class="videoFullscreen left" id="52">
+<video width="100%" id="vid52" muted controls onLoadedData = "videoLoaded(52)">
+     <source src="./data/52_42_42_Adorably Cute Polar Bear Cubs Go Sledging!.mp4" type="video/mp4"/>
+</video>
+</div>
+			<div class="text xl" id="53" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+See you soon!
+</span></div>
+			<div class="text m" id="14" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Closer! Scroll back up and try again!
+</span></div>
+        <div class="treeHolder">
+            <div class="tree">
+                 <ul>
+                    <li>
+                        <div class="circle active" id="c2"><i class="fas fa-play fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c6"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
 
-            Scroll back up and try again!
-        </div>
-        <div class="text" id="16" style="color:#FFFFFFFF; background-color:#00000000">
-            Sorry, this is unfortunately wrong &#129488;
+                   <ul>
+                            <li>
+                                <div class="circle" id="c10"><i class="fas fa-map-marked-alt fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
 
-            Scroll back up and try again!
-        </div>
-        <div class="text" id="17" style="color:#FFFFFFFF; background-color:#00000000">
-            You are absolutely right! &#128079;
-        </div>
-        <div class="text" id="18" style="color:#FFFFFFFF; background-color:#00000000">
-            Actually there are more bears than humans on the island! &#128516;
-        </div>
-        <div class="text" id="20" style="color:#555555FF; background-color:#AAAAAA00">
-            Let us jump to the island where many many bears are located: Svalbard!
-        </div>
-        <div class="headinger" id="22" style="color:#FFFFFFFF; background-color:#00000000">
-            <h3>Now we have a look at the skull of one of these majestic bears</h3>
-        </div>
-        <div class="headinger" id="26">
-            <div>What do you think, is that a bear?</div>
-            <div style="margin-top: 50px">
-                <input type="radio" id="question:Yes" name="question26" value="Yes" checked>
-                <label for="question:Yes">Yes</label>
-                <input type="radio" id="question:No" name="question26" value="No">
-                <label for="question:No">No</label>
-            </div>
-        </div>
-        <div class="headinger" id="29" style="color:#FFFFFFFF; background-color:#00000000">
-            <h3>And now the real bear skull!</h3>
-        </div>
-        <div class="description" id="32" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-Look at just how stunning these teeth are!
-</span></div>
-        <div class="description" id="33" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-With the elongated head it looks like an alien!
-</span></div>
-        <div class="description" id="34" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-This visualization is called ISO visualization and presents surfaces with equal values.
+                   <ul>
+                            <li>
+                                <div class="circle" id="c58"><i class="fas fa-map-marked-alt fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
 
-Try out different settings if you like:
-<a onclick="adaptISO(0.1)" style="display: inline">0.1</a>, <a onclick="adaptISO(0.5)"
-                                                               style="display: inline">0.5</a>,<a
-        onclick="adaptISO(0.8)" style="display: inline">0.8</a>
-</span></div>
-        <div class="description" id="36" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-In a so called slice view you can see the thin bone structures within the head.
-</span></div>
-        <div class="text" id="37">
-            Will be replaced with a SliceVis
-        </div>
-        <div class="description" id="38" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-Volume visualization is cool right &#128525;?
-</span></div>
-        <div class="description" id="39" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-These structures warm the air before the bear breathes in!
-</span></div>
-        <div class="headinger" id="40" style="color:#FFFFFFFF; background-color:#00000000">
-            <h3>Perfect for the winter! ❄️</h3>
-        </div>
-        <div class="videoFullscreen" id="41">
-            <video width="100%" id="vid41" muted controls onLoadedData="videoLoaded(41)">
-                <source src="./data/42_42_Adorably Cute Polar Bear Cubs Go Sledging!.mp4" type="video/mp4"/>
-            </video>
-        </div>
-        <div class="headinger" id="44">
-            See you soon!
-        </div>
-        <div class="image" id="45">
-            <img src="./data/46_46_standard_compressed_orrfugl_94559.jpg"/></div>
-        <div class="description" id="47" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-It is an Orrfugl!
-</span></div>
-        <div class="text" id="48" style="color:#FFFFFFFF; background-color:#00000000">
-            We hope you liked our little story. Now check out these cute little bears sliding down a hill!
-        </div>
-        <div class="description" id="50" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-Does that look like a beak? 🤔
-</span></div>
-        <div class="description" id="51" style="color:#FFFFFFFF; background-color:#00000000">
-<span>
-Is that really a bear? 🧐
-</span></div>
-        <div class="text" id="52" style="color:#FFFFFFFF; background-color:#00000000">
-            Hmm, maybe you want to check out the skull again &#128513;
-        </div>
-        <div class="text" id="53" style="color:#FFFFFFFF; background-color:#00000000">
-            You are absolutely right! 🤩
-        </div>
-    </div>
+<ul><li>                             <div class="circle" id="c12"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
+
+<ul><li>                             <div class="circle" id="c13"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+</li><li>                             <div class="circle" id="c14"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+</li><li>                             <div class="circle" id="c15"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c16"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c17"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c18"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c56"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c57"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+<ul><li>                             <div class="circle" id="c24"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
+
+<ul><li>                             <div class="circle" id="c25"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c26"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+</li><li>                             <div class="circle" id="c29"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c30"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c32"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c33"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c34"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c36"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c38"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c40"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c42"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c44"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c46"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c54"><i class="fas fa-cube fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c51"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c52"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c53"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+</li></li></ul>
+</li></li></ul>
+                 </li>
+            </ul>
+
+           </div></div>
+
+</div>
 </main>
 <script type="module" src="./js/index.js"></script>
-<script type="text/javascript" src="./js/mapCode.js"></script>
+<script type="module" src="./js/mapCode.js"></script>
+
 </body>
 </html>

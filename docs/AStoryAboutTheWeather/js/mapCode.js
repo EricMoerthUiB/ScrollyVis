@@ -1,61 +1,172 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3Bvb25lcnVpYiIsImEiOiJja2xjbGtyNWIxdXJvMnducGZhbWtyanhoIn0.edNKG90Wl-j4w7VSob5jkg';
 
-function easeTo(map) {
-    map.easeTo({duration: 10000, zoom: 8});
+export var maps = [];
+export var mapSize = 5;
+
+function flyFromTo(p, from, to, map) {
+    // let d = distance(from[0], from[1], to[0], to[1]);
+    let delay = p < 0.2 ? 0 : p > 0.8 ? 1 : (p - 0.2) / (0.8 - 0.2);
+    let zoom = 10 - (sinRamp(delay) * 3);
+    let pos = [from[0] + (to[0] - from[0]) * delay, from[1] + (to[1] - from[1]) * delay];
+    map.setZoom(zoom);
+    map.setCenter(pos);
 }
 
-var map33 = new mapboxgl.Map({
-    container: 'map33',
+function alterMapZoom(p, zoomFrom, zoomTo, map) {
+    let np = p < 0.5 ? 2 * p : 1;
+    map.setZoom(zoomFrom + (zoomTo - zoomFrom) * np);
+}
+
+// Ramp InOut without Platou
+//   /\
+// /   \
+function sinRamp(p) {
+    return p > 0.5 ? 1 - (2 * (p - 0.5)) : 2 * p;
+}
+
+
+export var map40 = new mapboxgl.Map({
+    container: 'map40',
     style: 'mapbox://styles/mapbox/dark-v10',
     minZoom: 3,
     maxZoom: 18,
-    center: [-82.701982, 32.046915],
+    interactive: false,
+    center: [-84.1557, 31.5782],
     scrollZoom: false
 });
-map33.on('load', function () {
-    (function mapLoop() {
-        let opacity = parseInt(document.getElementById("map33").parentElement.style.opacity);
-        if (isNaN(opacity) || opacity <= 0.95) {
-            setTimeout(mapLoop, 100);
-        } else {
-            easeTo(map33);
-        }
-    })();
+map40.on('load', function () {
+    new mapboxgl.Marker().setLngLat([-84.1557, 31.5782]).addTo(map40);
+    maps.push(map40);
     $.ajax({
         type: "GET",
         url: "data/stormData.json",
         dataType: "json",
         success: function (data) {
-            processDataDBZ(data, map33);
+            processDataDBZ(data, map40);
         }
     });
 });
-var map51 = new mapboxgl.Map({
-    container: 'map51',
+
+export function map40Behaviour(p) {
+    alterMapZoom(p, 5, 10, map40);
+}
+
+
+export var map41 = new mapboxgl.Map({
+    container: 'map41',
     style: 'mapbox://styles/mapbox/dark-v10',
     minZoom: 3,
     maxZoom: 18,
-    center: [-82.701982, 32.046915],
+    interactive: false,
+    center: [-84.1557, 31.5782],
+    zoom: 10,
     scrollZoom: false
 });
-map51.on('load', function () {
-    (function mapLoop() {
-        let opacity = parseInt(document.getElementById("map51").parentElement.style.opacity);
-        if (isNaN(opacity) || opacity <= 0.95) {
-            setTimeout(mapLoop, 100);
-        } else {
-            easeTo(map51);
-        }
-    })();
+map41.on('load', function () {
+    new mapboxgl.Marker().setLngLat([-83.6536, 31.706]).addTo(map41);
+    new mapboxgl.Marker().setLngLat([-84.1557, 31.5782]).addTo(map41);
+    maps.push(map41);
     $.ajax({
         type: "GET",
         url: "data/stormData.json",
         dataType: "json",
         success: function (data) {
-            processDataHail(data, map51);
+            processDataDBZ(data, map41);
         }
     });
 });
+
+export function map41Behaviour(p) {
+    flyFromTo(p, [-84.1557, 31.5782], [-83.6536, 31.706], map41)
+}
+
+
+export var map17 = new mapboxgl.Map({
+    container: 'map17',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    minZoom: 3,
+    maxZoom: 18,
+    interactive: false,
+    center: [-83.6536, 31.706],
+    zoom: 10,
+    scrollZoom: false
+});
+map17.on('load', function () {
+    new mapboxgl.Marker().setLngLat([-81.0998, 32.0835]).addTo(map17);
+    new mapboxgl.Marker().setLngLat([-83.6536, 31.706]).addTo(map17);
+    maps.push(map17);
+    $.ajax({
+        type: "GET",
+        url: "data/stormData.json",
+        dataType: "json",
+        success: function (data) {
+            processDataDBZ(data, map17);
+        }
+    });
+});
+
+export function map17Behaviour(p) {
+    flyFromTo(p, [-83.6536, 31.706], [-81.0998, 32.0835], map17)
+}
+
+
+export var map42 = new mapboxgl.Map({
+    container: 'map42',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    minZoom: 3,
+    maxZoom: 18,
+    interactive: false,
+    center: [-81.0998, 32.0835],
+    zoom: 10,
+    scrollZoom: false
+});
+map42.on('load', function () {
+    new mapboxgl.Marker().setLngLat([-84.1557, 31.5782]).addTo(map42);
+    new mapboxgl.Marker().setLngLat([-81.0998, 32.0835]).addTo(map42);
+    maps.push(map42);
+    $.ajax({
+        type: "GET",
+        url: "data/stormData.json",
+        dataType: "json",
+        success: function (data) {
+            processDataHail(data, map42);
+        }
+    });
+});
+
+export function map42Behaviour(p) {
+    flyFromTo(p, [-81.0998, 32.0835], [-84.1557, 31.5782], map42)
+}
+
+
+export var map21 = new mapboxgl.Map({
+    container: 'map21',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    minZoom: 3,
+    maxZoom: 18,
+    interactive: false,
+    center: [-84.1557, 31.5782],
+    zoom: 10,
+    scrollZoom: false
+});
+map21.on('load', function () {
+    new mapboxgl.Marker().setLngLat([-81.0998, 32.0835]).addTo(map21);
+    new mapboxgl.Marker().setLngLat([-84.1557, 31.5782]).addTo(map21);
+    maps.push(map21);
+    $.ajax({
+        type: "GET",
+        url: "data/stormData.json",
+        dataType: "json",
+        success: function (data) {
+            processDataHail(data, map21);
+        }
+    });
+});
+
+export function map21Behaviour(p) {
+    flyFromTo(p, [-84.1557, 31.5782], [-81.0998, 32.0835], map21)
+}
+
 
 function processDataDBZ(data, map) {
     var geojson = {
@@ -87,7 +198,7 @@ function processDataDBZ(data, map) {
             'fill-color': [
                 'interpolate',
                 ['linear'],
-                ['get','dbz'],
+                ['get', 'dbz'],
                 30,
                 'rgba(0,0,0,0)',
                 39,
@@ -118,7 +229,7 @@ function processDataHail(data, map) {
     var max = 0;
     Object.keys(data.series).forEach(index => {
         data.series[index].forEach(data => {
-            if(max < parseFloat(data.hail_mass)){
+            if (max < parseFloat(data.hail_mass)) {
                 max = parseFloat(data.hail_mass);
             }
             geojson.data.features.push({
@@ -140,7 +251,7 @@ function processDataHail(data, map) {
             'fill-color': [
                 'interpolate',
                 ['linear'],
-                ['get','hail'],
+                ['get', 'hail'],
                 0,
                 'rgba(0,0,0,0)',
                 2.4,

@@ -11,6 +11,36 @@ var renderer,
     volconfig,
     cmtextures;
 
+
+export function volume_render_init_withContainer(renderIn, container) {
+    render = renderIn;
+    scene = new THREE.Scene();
+    // Create renderer
+    var canvas = document.createElement('canvas');
+    var context = canvas.getContext('webgl2', {alpha: false, antialias: false});
+    renderer = new THREE.WebGLRenderer({canvas: canvas, context: context});
+    renderer.setPixelRatio(container.devicePixelRatio);
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    while (container.childNodes.length > 0) {
+        container.removeChild(container.childNodes[0]);
+    }
+    container.appendChild(renderer.domElement);
+    var h = 500; // frustum height
+    var aspect = container.offsetWidth / container.offsetHeight;
+    camera = new THREE.OrthographicCamera(-h * aspect / 2,
+        h * aspect / 2,
+        h / 2,
+        -h / 2,
+        1,
+        100000);
+    camera.position.set(0, 0, 500);
+    camera.up.set(0, 0, 1); // In our data, z is up
+    // camera.zoom = 0.8;
+    volconfig = {clim1: 0.15, clim2: 0.8, renderstyle: 'mip', isothreshold: 0.15, opacity: 1.0, colormap: 'viridis'};
+    return [renderer, scene, camera];
+}
+
+
 export function volume_render_init(renderIn) {
     render = renderIn;
     scene = new THREE.Scene();
@@ -27,16 +57,16 @@ export function volume_render_init(renderIn) {
         h * aspect / 2,
         h / 2,
         -h / 2,
-        0.00001,
-        200000);
-    camera.position.set(0, 0, 0);
+        1,
+        100000);
+    camera.position.set(0, 0, 500);
     camera.up.set(0, 0, 1); // In our data, z is up
-    camera.zoom = 0.8;
+    // camera.zoom = 0.8;
     volconfig = {clim1: 0.15, clim2: 0.8, renderstyle: 'mip', isothreshold: 0.15, opacity: 0.0, colormap: 'viridis'};
     return [renderer, scene, camera];
 }
 
-export function getColormap(colormap){
+export function getColormap(colormap) {
     return cmtextures[colormap];
 }
 
@@ -76,6 +106,9 @@ export function loadData(url, receiver) {
             blending: THREE.NormalBlending,
             transparent: true,
         });
+        material.customProgramCacheKey = function () {
+            return '1';
+        };
         materials.push(material);
 
         // THREE.Mesh
@@ -93,11 +126,11 @@ export function loadData(url, receiver) {
             uniforms: {
                 diffuse: {value: textureSlice},
                 depth: {value: 0},
-                size: {value: new THREE.Vector2(500 * (volume.xLength/volume.yLength), 500)},
+                size: {value: new THREE.Vector2(500 * (volume.xLength / volume.yLength), 500)},
                 u_opacity: {value: 0.0},
                 u_level: {value: 0.51},
                 u_window: {value: 0.99},
-                u_seg: {value: false},
+                u_color: {value: new THREE.Vector3(1,1,1)},
                 transparent: true,
             },
             vertexShader: sliceShader.vertexShader,
@@ -106,7 +139,10 @@ export function loadData(url, receiver) {
             transparent: true,
             glslVersion: THREE.GLSL3
         });
-        const geometrySlice = new THREE.PlaneGeometry(500 * (volume.xLength/volume.yLength), 500);
+        materialSlice.customProgramCacheKey = function () {
+            return '1';
+        };
+        const geometrySlice = new THREE.PlaneGeometry(500 * (volume.xLength / volume.yLength), 500);
         var meshSlice = new THREE.Mesh(geometrySlice, materialSlice);
 
         receiver(mesh, meshSlice, volume)
@@ -130,7 +166,7 @@ function readNifti(url, receiver) {
                 let niftiHeader = nifti.readHeader(data);
                 let volume = new Volume();
                 let image = nifti.readImage(niftiHeader, data);
-                let int8 =  new Int8Array(image);
+                let int8 = new Int8Array(image);
                 let int16 = new Int16Array(image);
                 let int32 = new Int32Array(image);
                 let float64 = new Float64Array(image);
@@ -139,7 +175,7 @@ function readNifti(url, receiver) {
                     volume.data = int8;
                 } else if (dimensions === int16.length) {
                     volume.data = int16;
-                } else if(dimensions === int32.length) {
+                } else if (dimensions === int32.length) {
                     volume.data = int32;
                 } else {
                     volume.data = float64
@@ -151,7 +187,7 @@ function readNifti(url, receiver) {
 
                 var dataASFloat32 = new Float32Array(volume.data.length);
                 for (var i = 0; i < volume.data.length; i++) {
-                    dataASFloat32 [i] = (volume.data[i]-min) / Math.sqrt(Math.pow(max,2)-Math.pow(min,2));
+                    dataASFloat32 [i] = (volume.data[i] - min) / Math.sqrt(Math.pow(max, 2) - Math.pow(min, 2));
                 }
                 volume.data = dataASFloat32;
                 // get the min and max intensities
@@ -163,7 +199,7 @@ function readNifti(url, receiver) {
                 volume.windowHigh = max;
                 // get the image dimensions
                 volume.dimensions = [niftiHeader.dims[1], niftiHeader.dims[2], niftiHeader.dims[3]];
-                volume.spacing = [niftiHeader.pixDims[1], niftiHeader.pixDims[2],niftiHeader.pixDims[3]];
+                volume.spacing = [niftiHeader.pixDims[1], niftiHeader.pixDims[2], niftiHeader.pixDims[3]];
                 volume.offset = [niftiHeader.qoffset_x, niftiHeader.qoffset_y, niftiHeader.qoffset_z];
                 volume.xLength = niftiHeader.dims[1];
                 volume.yLength = niftiHeader.dims[2];

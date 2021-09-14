@@ -19,7 +19,7 @@ var VolumeSliceRenderShader = {
         "     uniform float u_opacity;",
         "     uniform float u_window;",
         "     uniform float u_level;",
-        "     uniform bool u_seg;",
+        "     uniform vec3 u_color;",
         "",
         "     uniform sampler2DArray diffuse;",
         "     in vec2 vUv;",
@@ -30,25 +30,15 @@ var VolumeSliceRenderShader = {
         "     void main() {",
         "         ",
         "         float val = texture(diffuse,vec3(vUv,depth)).r;",
-        "         if(u_seg){",
-        "           if(val >= 1.0)" +
-        "               outColor = vec4(vec3(0.98, 0.73, 0.11), u_opacity);",
-        "           else if(val >= 0.99 && val < 1.0)" +
-        "               outColor = vec4(vec3(0.58, 0.11, 0.47), u_opacity);",
-        "           else if(val >= 0.01 && val < 0.99)" +
-        "               outColor = vec4(vec3(0.29, 0.54, 0.78), u_opacity);",
-        "           else" +
+        "         if(val < (u_level - u_window/2.0))",
+        "              outColor = vec4(0,0,0,0);",
+        "         else if(val > (u_level + u_window/2.0))",
         "               outColor = vec4(0,0,0,0);",
-        "         }else{",
-        "           if(val < (u_level - u_window/2.0))",
-        "               outColor = vec4(0,0,0,0);",
-        "           else if(val > (u_level + u_window/2.0))",
-        "                outColor = vec4(0,0,0,0);",
-        "           else {",
-        "                val = (val - (u_level - u_window/2.0)) * 1.0/u_window;",
-        "                outColor = vec4(vec3(val,val,val)*1.5, u_opacity);",
-        "           }",
+        "         else {",
+        "               val = (val - (u_level - u_window/2.0)) * 1.0/u_window;",
+        "               outColor = vec4(vec3(val,val,val)*u_color*1.5, u_opacity);",
         "         }",
+        "",
         "     }",
     ].join("\n")
 };
