@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/tree.css" />
+    <script type="text/javascript" src="./js/nifti-reader.js"></script>
+    <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
+    <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
+   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+   <script type="module" src="./js/volume-render.js"></script>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+   <script type="text/javascript" src="js/sketchfab-viewer-1.12.0.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+   <script type="text/javascript" src="./js/videoCode.js"></script>
+   </head>
+    <body>
+ <main>
+<div class="content content--canvas">
+			<div class="header" id="2">
+            <h1 class="header__title">Unearthing the truth</h1>
+            <p class="header__text">Interactive archaeology</p>
+            <div id="progressContainer">
+              <div id="myProgress">
+              <div id="myBar"></div>
+             </div>
+              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+              </div>        </div>
+			<div class="text m" id="11" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+A Zimbabwean archaeologist reimagines the story of a momentous African civilisation
+</span></div>
+<div class="sketchfab" id="3">
+   <iframe id="sketch3" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+</div>
+			<div class="subtext center right m" id="5" style="color:#000000; background-color:#88888855" >
+			<span style='width: 100%'>
+				The outer wall of the Great Enclosure, the apogee of the medieval state known as Great Zimbabwe, is a triumph of engineering.
+			</span>
+			</div>
+			<div class="subtext center right m" id="6" style="color:#000000; background-color:#88888800" >
+			<span style='width: 100%'>
+				The elliptical structure, 250 metres round, rises 11 metres towards the sky. 
+			</span>
+			</div>
+			<div class="subtext center right m" id="8" style="color:#000000; background-color:#88888800" >
+			<span style='width: 100%'>
+				More than a million granite stones are stacked without a drop of mortar, but with a geometric precision that ensures the stoutness of the edifice centuries later. 
+			</span>
+			</div>
+			<div class="subtext center right m" id="10" style="color:#000000; background-color:#88888800" >
+			<span style='width: 100%'>
+				Near the top of the wall a row of chevrons adds a dash of flair. 
+			</span>
+			</div>
+			<div class="subtext center right m" id="13" style="color:#000000; background-color:#88888800" >
+			<span style='width: 100%'>
+				Inside is further evidence of a sophisticated civilisation. Drainage channels snake along the ground. 
+			</span>
+			</div>
+			<div class="subtext center right m" id="15" style="color:#000000; background-color:#88888800" >
+			<span style='width: 100%'>
+				Most striking is the drystone Conical Tower, 5.5 metres across at the bottom, almost reaching the height of the outer wall. Its purpose is a mystery. 
+			</span>
+			</div>
+			<div class="text m" id="17" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Another architectural interesting structure is the so called Hill Complex
+</span></div>
+<div class="sketchfab" id="18">
+   <iframe id="sketch18" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+</div>
+			<div class="subtext center right m" id="19" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				The earliest of the prominent areas settled by Great Zimbabwe’s religious and political leaders
+			</span>
+			</div>
+			<div class="subtext center right m" id="21" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				The Hill Complex Cave
+			</span>
+			</div>
+			<div class="subtext center right m" id="24" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				The Hill complex from top
+			</span>
+			</div>
+			<div class="text m" id="23" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+Finish!
+
+check out <a href="https://www.economist.com/interactive/christmas-specials/2021/12/18/great-zimbabwe-archaeology">the Article</a>
+</span></div>
+        <div class="treeHolder">
+            <div class="tree">
+                 <ul>
+                    <li>
+                        <div class="circle active" id="c2"><i class="fas fa-play fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c11"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c3"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c4"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c7"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c9"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c12"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c14"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c17"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c18"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c20"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c22"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c23"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                 </li>
+            </ul>
+
+           </div></div>
+
+</div>
+</main>
+<script type="module" src="./js/index.js"></script>
+<script type="module" src="./js/mapCode.js"></script>
+<script type="module" src="./js/sketchfab.js"></script>
+
+</body>
+</html>
