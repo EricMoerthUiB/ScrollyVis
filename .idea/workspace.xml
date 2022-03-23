@@ -3,116 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="304335cd-6799-483d-ae21-694465124c5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/.idea/website.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/css/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/11_16_dynamic narratives.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/15_ScrollyVis Editor Tutorial.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/18_23_polarBear.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/21_ANoseForTheWinter.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/22_26_MachineLearning.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/24_MachineLearning.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/25_28_hornero.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/27_AStoryAboutTheWeather.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/32_Result.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/3_2_DSC06379.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/5_Editor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/7_Editor2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/9_Editor32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/instances.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/loadData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/mapCode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/nifti-reader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/videoCode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/volume-render.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/libs/dat.gui.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/Volume.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/Volume.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/VolumeSlice.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/VolumeSlice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/shaders/SliceShader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/shaders/VolumeShader.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/shaders/VolumeShader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/node_modules/three/build/three.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/textures/cm_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/textures/cm_viridis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/css/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/instances.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/loadData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/mapCode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/nifti-reader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/sketchfab-viewer-1.12.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/sketchfab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/videoCode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/js/volume-render.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/libs/dat.gui.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/misc/Volume.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/misc/Volume.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/misc/VolumeSlice.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/misc/VolumeSlice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/shaders/SliceShader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/shaders/VolumeShader.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/jsm/shaders/VolumeShader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/node_modules/three/build/three.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/textures/cm_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ExampleStory/textures/cm_viridis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ScrollyVis/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ScrollyVis/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/.idea/website.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/css/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/11_19_W1_1996.10.25_bias_ss_FLAIR.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/11_24_brainSegment.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/12_24_brainSegment.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/15_19_W1_1996.10.25_bias_ss_FLAIR.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/15_24_brainSegment.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/16_24_brainSegment.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/18_24_brainSegment.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/21_30_1 BIpRgx5FsEMhr1k2EqBKFg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/24_53_result.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/24_55_result.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/25_55_result.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/29_55_result.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/30_55_result.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/32_57_results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/34_45_numbers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/39_40_ELazznXXYAADD-U.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/3_11_fmri103-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/data/8_19_W1_1996.10.25_bias_ss_FLAIR.nii.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/js/instances.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/js/loadData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/js/mapCode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/js/nifti-reader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/js/videoCode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/js/volume-render.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/libs/dat.gui.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/misc/Volume.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/misc/Volume.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/misc/VolumeSlice.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/misc/VolumeSlice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/shaders/SliceShader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/shaders/VolumeShader.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/jsm/shaders/VolumeShader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/node_modules/three/build/three.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/textures/cm_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/machineLearning/textures/cm_viridis.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,12 +30,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/AdditionalMaterials" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\ws\ScrollyVis\docs" />
-      <recent name="C:\ws\ScrollyVis" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\ws\ScrollyVis\docs\ScrollyVis" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ericm\Workspace\ScrollyVis\docs\AdditionalMaterials" />
+      <recent name="C:\ws\ScrollyVis\docs" />
+      <recent name="C:\ws\ScrollyVis" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -168,7 +60,7 @@
       <workItem from="1631648060595" duration="400000" />
       <workItem from="1631649399000" duration="3037000" />
       <workItem from="1647549634092" duration="393000" />
-      <workItem from="1648031348946" duration="1951000" />
+      <workItem from="1648031348946" duration="2704000" />
     </task>
     <servers />
   </component>
