@@ -2,8 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="304335cd-6799-483d-ae21-694465124c5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/css/tree.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/11_11_16_dynamic narratives.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/15_15_ScrollyVis Editor Tutorial.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/17_32_Result.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/22_21_ANoseForTheWinter.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/23_21_ANoseForTheWinter.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/27_The Economist.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/32_Slide3.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/37_Slide2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/3_3_2_DSC06379.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/41_27_AStoryAboutTheWeather.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/43_Slide1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/47_27_AStoryAboutTheWeather.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/5_5_Editor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/7_7_Editor2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/data/9_9_Editor32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/instances.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/loadData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/mapCode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/nifti-reader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/sketchfab-viewer-1.12.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/sketchfab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/videoCode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/js/volume-render.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/libs/dat.gui.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/Volume.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/Volume.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/VolumeSlice.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/misc/VolumeSlice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/shaders/SliceShader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/shaders/VolumeShader.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/jsm/shaders/VolumeShader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/node_modules/three/build/three.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/textures/cm_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AdditionalMaterials/textures/cm_viridis.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +97,7 @@
       <workItem from="1631648060595" duration="400000" />
       <workItem from="1631649399000" duration="3037000" />
       <workItem from="1647549634092" duration="393000" />
-      <workItem from="1648031348946" duration="2704000" />
+      <workItem from="1648031348946" duration="2956000" />
     </task>
     <servers />
   </component>
