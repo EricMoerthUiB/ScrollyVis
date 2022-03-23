@@ -40,7 +40,6 @@ export function volume_render_init_withContainer(renderIn, container) {
     return [renderer, scene, camera];
 }
 
-
 export function volume_render_init(renderIn) {
     render = renderIn;
     scene = new THREE.Scene();
@@ -117,9 +116,35 @@ export function loadData(url, receiver) {
         var mesh = new THREE.Mesh(geometry, material);
         // scene.add(mesh);
 
+        // Transform 1D (3D) array to other slice direction
+        var dataASFloat32 = new Float32Array(volume.data.length);
+        var indexOfArray = 0;
 
+        // 1) xzy
+        // for(let y = 0; y < volume.yLength; y++){
+        //     for (let z= 0; z < volume.zLength; z++){
+        //         for(let x = 0; x < volume.xLength; x++){
+        //             dataASFloat32[indexOfArray++] = volume.data[x + y * volume.xLength + (volume.xLength * volume.yLength * z)]
+        //         }
+        //     }
+        // }
+
+        // 2) zyx
+        // const textureSlice = new THREE.DataTexture2DArray(dataASFloat32, volume.xLength, volume.zLength, volume.yLength);
+        // for (let x = 0; x < volume.xLength; x++) {
+        //     for (let y = 0; y < volume.yLength; y++) {
+        //         for (let z = 0; z < volume.zLength; z++) {
+        //             dataASFloat32[indexOfArray++] = volume.data[x + y * volume.xLength + (volume.xLength * volume.yLength * z)]
+        //         }
+        //     }
+        // }
+        // const textureSlice = new THREE.DataTexture2DArray(dataASFloat32, volume.zLength, volume.yLength, volume.xLength);
+
+        // 3) xyz
         // Slicing setup
         const textureSlice = new THREE.DataTexture2DArray(volume.data, volume.xLength, volume.yLength, volume.zLength);
+
+
         textureSlice.format = THREE.RedFormat;
         textureSlice.type = THREE.FloatType;
         const materialSlice = new THREE.ShaderMaterial({
@@ -128,9 +153,9 @@ export function loadData(url, receiver) {
                 depth: {value: 0},
                 size: {value: new THREE.Vector2(500 * (volume.xLength / volume.yLength), 500)},
                 u_opacity: {value: 0.0},
-                u_level: {value: 0.51},
-                u_window: {value: 0.99},
-                u_color: {value: new THREE.Vector3(1,1,1)},
+                u_level: {value: (volume.windowHigh - volume.windowLow) / 2 + volume.windowLow},
+                u_window: {value: volume.windowHigh - volume.windowLow},
+                u_color: {value: new THREE.Vector3(1, 1, 1)},
                 transparent: true,
             },
             vertexShader: sliceShader.vertexShader,

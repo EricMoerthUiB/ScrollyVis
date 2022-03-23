@@ -1,6 +1,7 @@
 import * as RENDER from "../js/volume-render.js"
 import * as VOLUME_LOADER from "./loadData.js"
 import * as MAP from "./mapCode.js"
+import * as SKETCHFAB from "./sketchfab.js"
 import * as INSTANCES_LOADER from "./instances.js"
 import {groupLength, groups} from "./loadData.js";
 import * as LoadData from "./loadData.js";
@@ -25,14 +26,15 @@ const transitionEnd = transitionBegin + step;
 uos(transitionBegin, transitionEnd, p => instances[start](p));
 scroll = 1050;
 document.addEventListener('keydown', (e) => {
-    if(e.code == "ArrowRight"){
+    if (e.code == "ArrowRight") {
         scroll = scroll + 1985;
-        window.scrollTo({top:scroll, left: 0, behavior: 'smooth'});
-    }else if(e.code == "ArrowLeft"){
+        window.scrollTo({top: scroll, left: 0, behavior: 'smooth'});
+    } else if (e.code == "ArrowLeft") {
         scroll = scroll - 1985;
-        window.scrollTo({top:scroll, left: 0, behavior: 'smooth'});
+        window.scrollTo({top: scroll, left: 0, behavior: 'smooth'});
     }
 });
+
 function render() {
     if (_renderer != null) {
         _renderer.render(_scene, _camera);
@@ -44,24 +46,18 @@ requestAnimationFrame(() => {
     resize();
     header.style.opacity = 1;
     var elem = document.getElementById("myBar");
-    if (groupLength === 0) {
-        elem.style.width = 100 + "%";
-        document.getElementById("done").style.opacity = "1";
-        document.getElementsByTagName('body')[0].style.overflow = "default";
-        document.getElementsByTagName('body')[0].style.position = "relative";
-    } else {
-        (function asyncLoop() {
-            elem.style.width = 100 * ((groups.length + MAP.maps.length) / (groupLength + MAP.mapSize)) + "%";
-            // console.log("MAP " + MAP.maps.length + " m " + MAP.mapSize);
-            if (groups.length < groupLength || MAP.maps.length < MAP.mapSize) {
-                setTimeout(asyncLoop, 10);
-            } else {
-                document.getElementById("done").style.opacity = "1";
-                document.getElementsByTagName('body')[0].style.overflow = "default";
-                document.getElementsByTagName('body')[0].style.position = "relative";
-            }
-        })();
-    }
+    (function asyncLoop() {
+        elem.style.width = 100 * ((groups.length + MAP.maps.length + SKETCHFAB.sketchfab.length) / (groupLength + MAP.mapSize + SKETCHFAB.sketchfabSize)) + "%";
+        // console.log("MAP " + MAP.maps.length + " m " + MAP.mapSize);
+        if (groups.length < groupLength || MAP.maps.length < MAP.mapSize || SKETCHFAB.sketchfab.length < SKETCHFAB.sketchfabSize) {
+            setTimeout(asyncLoop, 10);
+        } else {
+            document.getElementById("done").style.opacity = "1";
+            elem.style.width = "100%";
+            document.getElementsByTagName('body')[0].style.overflow = "default";
+            document.getElementsByTagName('body')[0].style.position = "relative";
+        }
+    })();
 });
 
 function resize() {

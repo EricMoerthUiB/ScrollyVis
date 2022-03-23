@@ -140,7 +140,7 @@ legend {
 button, input, select, textarea {
     font-family: inherit;
     font-size: 100%;
-    margin: 10px;
+    margin: 0;
 }
 
 button, input {
@@ -374,17 +374,34 @@ a:focus {
     padding: 0 40px;
 }
 
-.s{
+.s {
     font-size: 1.5rem;
 }
-.m{
+
+.m {
     font-size: 2.5rem;
 }
-.l{
+
+.l {
     font-size: 3.5rem;
 }
-.xl{
+
+.xl {
     font-size: 5.0rem;
+}
+
+.audio {
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    line-height: 1.2;
+    text-align: left;
+    align-items: center;
+    color: white;
+    width: 20%;
+    padding-left: 10px;
+    right: 15%;
 }
 
 .subtext {
@@ -402,16 +419,19 @@ a:focus {
     padding-left: 10px;
 }
 
-.subtext.left{
+.subtext.left {
     left: 10%;
 }
-.subtext.right{
+
+.subtext.right {
     right: 10%;
 }
-.subtext.top{
+
+.subtext.top {
     top: 10%;
 }
-.subtext.bottom{
+
+.subtext.bottom {
     bottom: 10%;
 }
 
@@ -447,6 +467,22 @@ a:focus {
     height: 100%;
 }
 
+.sketchfab {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    will-change: opacity;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sketchfab iframe {
+    pointer-events: none;
+}
+
 .image {
     display: flex;
     position: fixed;
@@ -459,14 +495,15 @@ a:focus {
     max-height: calc(80%);
 }
 
-.image.left{
-    left: 10%;
+.image.left {
+    left: 2%;
 }
-.image.right{
+
+.image.right {
     right: 2%;
 }
 
-.image img{
+.image img {
     width: 90%;
     height: auto;
     /*vertical-align:middle;*/
@@ -485,7 +522,7 @@ a:focus {
     left: 0;
 }
 
-.imageFullscreen img{
+.imageFullscreen img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -503,14 +540,15 @@ a:focus {
     max-height: calc(80%);
 }
 
-.video.left{
+.video.left {
     left: 2%;
 }
-.video.right{
+
+.video.right {
     right: 2%;
 }
 
-.video video{
+.video video {
     width: 95%;
     height: auto;
     /*vertical-align:middle;*/
@@ -548,7 +586,7 @@ a:focus {
     padding: 0 40px;
 }
 
-.chart{
+.chart {
     display: flex;
     position: fixed;
     z-index: -1;
@@ -647,7 +685,7 @@ input[type=radio] {
 */
 input[type=radio] + label {
     display: inline-block;
-    margin: 4px;
+    margin: -2px;
     padding: 4px 12px;
     background-color: #2e2e2e;
     border-color: #3d3d3d;

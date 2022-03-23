@@ -11,6 +11,7 @@
    <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
    <script type="module" src="./js/volume-render.js"></script>
    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+   <script type="text/javascript" src="js/sketchfab-viewer-1.12.0.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
@@ -18,15 +19,15 @@
    <script type="text/javascript" src="./js/videoCode.js"></script>
     <style>
     body:after{
-     content: url("./data/3_2_DSC06379.jpg") url("./data/5_Editor.png") url("./data/7_Editor2.png") url("./data/9_Editor32.png") url("./data/11_16_dynamic narratives.png") url("./data/15_ScrollyVis Editor Tutorial.mp4") url("./data/32_Result.png") url("./data/18_23_polarBear.PNG") url("./data/21_ANoseForTheWinter.mp4") url("./data/25_28_hornero.PNG") url("./data/27_AStoryAboutTheWeather.mp4") url("./data/22_26_MachineLearning.PNG") url("./data/24_MachineLearning.mp4")
+     content: url("./data/3_3_2_DSC06379.jpg") url("./data/5_5_Editor.png") url("./data/7_7_Editor2.png") url("./data/9_9_Editor32.png") url("./data/11_11_16_dynamic narratives.png") url("./data/15_15_ScrollyVis Editor Tutorial.mp4") url("./data/17_32_Result.png") url("./data/27_The Economist.PNG") url("./data/22_21_ANoseForTheWinter.mp4") url("./data/43_Slide1.PNG") url("./data/47_27_AStoryAboutTheWeather.mp4") url("./data/37_Slide2.PNG") url("./data/41_27_AStoryAboutTheWeather.mp4") url("./data/32_Slide3.PNG") url("./data/23_21_ANoseForTheWinter.mp4") 
     }
     </style>   </head>
     <body>
  <main>
 <div class="content content--canvas">
 			<div class="header" id="2">
-            <h1 class="header__title">ScrollyVis: Guided dynamic narratives for scientific storytelling</h1>
-            <p class="header__text">TVCG Submission</p>
+            <h1 class="header__title">ScrollyVis: Interactive visual authoring of guided dynamic narratives for scientific scrollytelling</h1>
+            <p class="header__text"></p>
             <div id="progressContainer">
               <div id="myProgress">
               <div id="myBar"></div>
@@ -34,35 +35,35 @@
               <div id="done" style="margin-left: 40%; opacity: 0">done</div>
               </div>        </div>
 <div class="imageFullscreen left" id="3">
-<img src="./data/3_2_DSC06379.jpg"/></div>
-			<div class="subtext center center l" id="4" style="color:#FFFFFF; background-color:#88888800; width: 60%" >
+<img src="./data/3_3_2_DSC06379.jpg"/></div>
+			<div class="subtext center center l" id="4" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
 				There are as many stories to tell as stars in the sky!
 			</span>
 			</div>
 <div class="imageFullscreen left" id="5">
-<img src="./data/5_Editor.png"/></div>
-			<div class="subtext center center l" id="6" style="color:#FFFFFF; background-color:#88888800; width: 60%" >
+<img src="./data/5_5_Editor.png"/></div>
+			<div class="subtext center center m" id="6" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
 				With ScrollyVis, we present a way to bring story ideas to life.
 			</span>
 			</div>
 <div class="imageFullscreen left" id="7">
-<img src="./data/7_Editor2.png"/></div>
-			<div class="subtext center center m" id="8" style="color:#FFFFFF; background-color:#88888800; width: 40%; margin-left: 120px" >
+<img src="./data/7_7_Editor2.png"/></div>
+			<div class="subtext center center m" id="8" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
 				This enables authors to tell guided dynamic narratives in scrollytelling-form by simply using our editor.
 			</span>
 			</div>
 <div class="imageFullscreen left" id="9">
-<img src="./data/9_Editor32.png"/></div>
-			<div class="subtext center center m" id="10" style="color:#FFFFFF; background-color:#88888800; width: 40%; margin-left: 120px" >
+<img src="./data/9_9_Editor32.png"/></div>
+			<div class="subtext center center m" id="10" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
 				Exported websites are ready for deployment on any webserver.
 			</span>
 			</div>
-<div class="image left" id="11">
-<img src="./data/11_16_dynamic narratives.png"/></div>
+<div class="image center" id="11">
+<img src="./data/11_11_16_dynamic narratives.png"/></div>
 			<div class="subtext center right m" id="12" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
 				Our editor allows authors to create guided interactive narratives.
@@ -73,113 +74,146 @@
 				Such narratives are especially important to increase viewer engagement.
 			</span>
 			</div>
-			<div class="text l" id="14" style="color:#FFFFFF; background-color:#00000000" >
+			<div class="text m" id="14" style="color:#FFFFFF; background-color:#00000000" >
 <span>
 Now, we will show you an introduction video to the editor
 </span></div>
 <div class="videoFullscreen left" id="15">
 <video width="100%" id="vid15" muted controls onLoadedData = "videoLoaded(15)">
-     <source src="./data/15_ScrollyVis Editor Tutorial.mp4" type="video/mp4"/>
+     <source src="./data/15_15_ScrollyVis Editor Tutorial.mp4" type="video/mp4"/>
 </video>
 </div>
-			<div class="text m" id="30" style="color:#FFFFFF; background-color:#00000000" >
+			<div class="text l" id="16" style="color:#FFFFFF; background-color:#00000000" >
 <span>
 To demonstrate the utility of our approach we condected a user evaluation with 12 participants
 </span></div>
-			<div class="text m" id="31" style="color:#FFFFFF; background-color:#00000000" >
+			<div class="text m" id="18" style="color:#FFFFFF; background-color:#00000000" >
 <span>
 Here are the results:
 </span></div>
-<div class="image left" id="32">
-<img src="./data/32_Result.png"/></div>
-			<div class="subtext center right m" id="33" style="color:#FFFFFF; background-color:#88888800" >
+<div class="image center" id="17">
+<img src="./data/17_32_Result.png"/></div>
+			<div class="subtext center right m" id="19" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
 				Overall the editor got very good feedback!
 			</span>
 			</div>
-			<div class="text m" id="16" style="color:#FFFFFF; background-color:#00000000" >
+			<div class="text m" id="20" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-Next, we will demonstrate three case studies created with our editor
+Next, we will demonstrate four case studies created with our editor
 </span></div>
-			<div class="headinger" id="17">
+			<div class="headinger" id="21">
 <div>Select which case study you would like to see</div>
-			<div style="margin-top: 50px">
-<input type="radio" id="question17:The Polar Bear: A Nose for Winter" name="question17" value="The Polar Bear: A Nose for Winter" checked>
-				<label for="question17:The Polar Bear: A Nose for Winter">The Polar Bear: A Nose for Winter</label>
-<input type="radio" id="question17:Machine Learning-based Segmentation" name="question17" value="Machine Learning-based Segmentation">
-				<label for="question17:Machine Learning-based Segmentation">Machine Learning-based Segmentation</label>
-<input type="radio" id="question17:A Story About the Weather" name="question17" value="A Story About the Weather">
-				<label for="question17:A Story About the Weather">A Story About the Weather</label>
+			<div style="margin-top: 50px">				
+<input type="radio" id="question21:The Economist: Unearthing The Truth Replica" name="question21" value="The Economist: Unearthing The Truth Replica"checked>
+				<label for="question21:The Economist: Unearthing The Truth Replica">The Economist: Unearthing The Truth Replica</label>				
+<input type="radio" id="question21:The Polar Bear: A Nose for Winter" name="question21" value="The Polar Bear: A Nose for Winter">
+				<label for="question21:The Polar Bear: A Nose for Winter">The Polar Bear: A Nose for Winter</label>				
+<input type="radio" id="question21:A story about the weather" name="question21" value="A story about the weather">
+				<label for="question21:A story about the weather">A story about the weather</label>				
+<input type="radio" id="question21: Anatomy Education" name="question21" value=" Anatomy Education">
+				<label for="question21: Anatomy Education"> Anatomy Education</label>
 </div>
 </div>
-<div class="image left" id="18">
-<img src="./data/18_23_polarBear.PNG"/></div>
-			<div class="subtext center right m" id="19" style="color:#FFFFFF; background-color:#88888800" >
+<div class="image center" id="27">
+<img src="./data/27_The Economist.PNG"/></div>
+			<div class="subtext center right s" id="28" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
-				Together with the curator of the modern osteological collection at the University Museum of Bergen, we created a story focused on outreach activities
+				The Economist presented an archeological story in their special edition in December 2019 including surface visualizations of an important archeological site. The story is available <a href="https://www.economist.com/interactive/christmas-specials/2021/12/18/great-zimbabwe-archaeology">here</a>
 			</span>
 			</div>
-			<div class="subtext center right m" id="20" style="color:#FFFFFF; background-color:#88888800" >
+			<div class="subtext center right s" id="29" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
-				This story primarily focuses on polar bears in Svalbard.
-
-Next we show this story in video format.
+				To show the capabilities of our editor we created a replica of the story and we only needed one author and we created it in a matter of minutes.
 			</span>
 			</div>
-<div class="videoFullscreen left" id="21">
-<video width="100%" id="vid21" muted controls onLoadedData = "videoLoaded(21)">
-     <source src="./data/21_ANoseForTheWinter.mp4" type="video/mp4"/>
-</video>
-</div>
-			<div class="text l" id="34" style="color:#FFFFFF; background-color:#00000000" >
+			<div class="text m" id="30" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-Learn more in our paper ScrollyVis!
+We show you a video of the result:
 </span></div>
-<div class="image left" id="25">
-<img src="./data/25_28_hornero.PNG"/></div>
-			<div class="subtext center right m" id="26" style="color:#FFFFFF; background-color:#88888800" >
-			<span style='width: 100%'>
-				This story is about a visual analytics tool for detection and characterization of hazardous thunderstorms. A paper about this tool is entitled Hornero.
-			</span>
-			</div>
-			<div class="subtext center right m" id="29" style="color:#FFFFFF; background-color:#88888800" >
-			<span style='width: 100%'>
-				In this story, we include custom code from the Hornero tool.
-
-Next we show the story in video format.
-			</span>
-			</div>
-<div class="videoFullscreen left" id="27">
-<video width="100%" id="vid27" muted controls onLoadedData = "videoLoaded(27)">
-     <source src="./data/27_AStoryAboutTheWeather.mp4" type="video/mp4"/>
+<div class="videoFullscreen left" id="22">
+<video width="100%" id="vid22" muted controls onLoadedData = "videoLoaded(22)">
+     <source src="./data/22_21_ANoseForTheWinter.mp4" type="video/mp4"/>
 </video>
 </div>
-			<div class="text l" id="36" style="color:#FFFFFF; background-color:#00000000" >
+			<div class="text m" id="31" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-Learn more in our paper ScrollyVis!
+The full story is available here: <a href="https://ericmoerthuib.github.io/ScrollyVis/UnearthingTheTruth/">Unearthing the Truth Replica</a>
 </span></div>
-<div class="image left" id="22">
-<img src="./data/22_26_MachineLearning.PNG"/></div>
-			<div class="subtext center right m" id="23" style="color:#FFFFFF; background-color:#88888800" >
+<div class="image center" id="43">
+<img src="./data/43_Slide1.PNG"/></div>
+			<div class="subtext center right m" id="44" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
-				This story presents results of a publication on automated segmentation of endometrial cancer imaging data in Magnetic Resonance Imaging using deep learning
+				In anatomy education bones are of great interest. The experts we invited have surface scans of human bones available on Sketchfab.
 			</span>
 			</div>
-			<div class="subtext center right m" id="28" style="color:#FFFFFF; background-color:#88888800" >
+			<div class="subtext center right m" id="45" style="color:#FFFFFF; background-color:#88888800" >
 			<span style='width: 100%'>
-				The authors introduce an automatic approach to create a segmentation mask.
-
-Next we show this story in video format.
+				ScrollyVis enables them to create interactive stories about the bones and enables them to evaluate the effectiveness when comparing it to unrestricted exploration in Sketchfab alone.
 			</span>
 			</div>
-<div class="videoFullscreen left" id="24">
-<video width="100%" id="vid24" muted controls onLoadedData = "videoLoaded(24)">
-     <source src="./data/24_MachineLearning.mp4" type="video/mp4"/>
+			<div class="text m" id="46" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+We show you a video of the result:
+</span></div>
+<div class="videoFullscreen left" id="47">
+<video width="100%" id="vid47" muted controls onLoadedData = "videoLoaded(47)">
+     <source src="./data/47_27_AStoryAboutTheWeather.mp4" type="video/mp4"/>
 </video>
 </div>
-			<div class="text l" id="35" style="color:#FFFFFF; background-color:#00000000" >
+			<div class="text m" id="48" style="color:#FFFFFF; background-color:#00000000" >
 <span>
-Learn more in our paper ScrollyVis!
+The full story is available here: <a href="https://ericmoerthuib.github.io/ScrollyVis/AnatomyEducation/">Anatomy education</a>
+</span></div>
+<div class="image center" id="37">
+<img src="./data/37_Slide2.PNG"/></div>
+			<div class="subtext center right m" id="38" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				In "A story about the weather" we use custom data provided by our expert to show the storm strength and hail amount.
+			</span>
+			</div>
+			<div class="subtext center right m" id="39" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				Adding custom code to the resulting stories of ScrollyVis is easily done by adapting the Javascript code.
+			</span>
+			</div>
+			<div class="text m" id="40" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+We show you a video of the result:
+</span></div>
+<div class="videoFullscreen left" id="41">
+<video width="100%" id="vid41" muted controls onLoadedData = "videoLoaded(41)">
+     <source src="./data/41_27_AStoryAboutTheWeather.mp4" type="video/mp4"/>
+</video>
+</div>
+			<div class="text m" id="42" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+The full story is available here: <a href="https://ericmoerthuib.github.io/ScrollyVis/AStoryAboutTheWeather/">A story about the weather</a>
+</span></div>
+<div class="image center" id="32">
+<img src="./data/32_Slide3.PNG"/></div>
+			<div class="subtext center right m" id="33" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				An important aspect of this story is including a volumetric scan of the bears skull.
+			</span>
+			</div>
+			<div class="subtext center right m" id="34" style="color:#FFFFFF; background-color:#88888800" >
+			<span style='width: 100%'>
+				A slice view of the bears nose reveals structures that warm up the ear before the bears breaths it in. This wouldn't be visible by only using a surface visualization of the skull.
+			</span>
+			</div>
+			<div class="text m" id="35" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+We show you a video of the result:
+</span></div>
+<div class="videoFullscreen left" id="23">
+<video width="100%" id="vid23" muted controls onLoadedData = "videoLoaded(23)">
+     <source src="./data/23_21_ANoseForTheWinter.mp4" type="video/mp4"/>
+</video>
+</div>
+			<div class="text m" id="36" style="color:#FFFFFF; background-color:#00000000" >
+<span>
+The full story is available here: <a href="https://ericmoerthuib.github.io/ScrollyVis/polarBear/">A Nose for the Winter</a>
 </span></div>
         <div class="treeHolder">
             <div class="tree">
@@ -230,7 +264,40 @@ Learn more in our paper ScrollyVis!
 
                    <ul>
                             <li>
+                                <div class="circle" id="c16"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c18"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c17"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c20"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+<ul><li>                             <div class="circle" id="c21"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
+
+<ul><li>                             <div class="circle" id="c27"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
                                 <div class="circle" id="c30"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c22"><i class="fas fa-video fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
@@ -240,56 +307,60 @@ Learn more in our paper ScrollyVis!
                             </li>
                         </ul>
 
-                   <ul>
-                            <li>
-                                <div class="circle" id="c32"><i class="fas fa-image fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-                   <ul>
-                            <li>
-                                <div class="circle" id="c16"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-<ul><li>                             <div class="circle" id="c17"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
-
-<ul><li>                             <div class="circle" id="c18"><i class="fas fa-image fa-xs treeIcon"></i></div>
-                   <ul>
-                            <li>
-                                <div class="circle" id="c21"><i class="fas fa-video fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-                   <ul>
-                            <li>
-                                <div class="circle" id="c34"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-</li><li>                             <div class="circle" id="c22"><i class="fas fa-image fa-xs treeIcon"></i></div>
-                   <ul>
-                            <li>
-                                <div class="circle" id="c24"><i class="fas fa-video fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
+</li><li>                             <div class="circle" id="c32"><i class="fas fa-image fa-xs treeIcon"></i></div>
                    <ul>
                             <li>
                                 <div class="circle" id="c35"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
-</li><li>                             <div class="circle" id="c25"><i class="fas fa-image fa-xs treeIcon"></i></div>
                    <ul>
                             <li>
-                                <div class="circle" id="c27"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                                <div class="circle" id="c23"><i class="fas fa-video fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
                    <ul>
                             <li>
                                 <div class="circle" id="c36"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+</li><li>                             <div class="circle" id="c37"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c40"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c41"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c42"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+</li><li>                             <div class="circle" id="c43"><i class="fas fa-image fa-xs treeIcon"></i></div>
+                   <ul>
+                            <li>
+                                <div class="circle" id="c46"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c47"><i class="fas fa-video fa-xs treeIcon"></i></div>
+                            </li>
+                        </ul>
+
+                   <ul>
+                            <li>
+                                <div class="circle" id="c48"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
@@ -303,6 +374,7 @@ Learn more in our paper ScrollyVis!
 </main>
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/mapCode.js"></script>
+<script type="module" src="./js/sketchfab.js"></script>
 
 </body>
 </html>
