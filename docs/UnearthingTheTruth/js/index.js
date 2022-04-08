@@ -16,7 +16,7 @@ uos(0, 1, p => render());
 [_renderer, _scene, _camera] = RENDER.volume_render_init(render);
 VOLUME_LOADER.loadVolumeData(_scene, _camera);
 [start, instances, once, len] = INSTANCES_LOADER.getInstances(_camera);
-document.getElementsByTagName('body')[0].style.minHeight = len * 3000 + "px";
+document.getElementsByTagName('body')[0].style.minHeight = len * 1500 + "px";
 document.getElementsByTagName('body')[0].style.overflow = "hidden";
 document.getElementsByTagName('body')[0].style.position = "fixed";
 const step = 1 / len;
