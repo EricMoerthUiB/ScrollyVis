@@ -2,199 +2,244 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/tree.css" />
+    <!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/tree.css"/>
     <script type="text/javascript" src="./js/nifti-reader.js"></script>
     <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
     <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
-   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
-   <script type="module" src="./js/volume-render.js"></script>
-   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-   <script type="text/javascript" src="js/sketchfab-viewer-1.12.0.js"></script>
+    <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+    <script type="module" src="./js/volume-render.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script type="text/javascript" src="js/sketchfab-viewer-1.12.0.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-   <script type="text/javascript" src="./js/videoCode.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
+    <script type="text/javascript" src="./js/videoCode.js"></script>
     <style>
-    body:after{
-     content: url("./data/20_monster-squad-1987-mummy.jpg") url("./data/22_0 LXaqE2Jb1EcxmSgO.jpg") url("./data/32_treasures-of-egypt-andrew-farley.jpg") url("./data/11__114502505_hi063242284.jpg") 
-    }
-    </style>   </head>
-    <body>
- <main>
-<div class="content content--canvas">
-			<div class="header" id="2">
+        body:after {
+            content: url("./data/20_monster-squad-1987-mummy.jpg") url("./data/22_0 LXaqE2Jb1EcxmSgO.jpg") url("./data/32_treasures-of-egypt-andrew-farley.jpg") url("./data/11__114502505_hi063242284.jpg")
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="content content--canvas">
+        <div class="header" id="2">
             <h1 class="header__title">The curse of the mummy</h1>
             <p class="header__text">An advanture game</p>
             <div id="progressContainer">
-              <div id="myProgress">
-              <div id="myBar"></div>
-             </div>
-              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
-              </div>        </div>
-<div class="sketchfab" id="3">
-   <iframe id="sketch3" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-			<div class="subtext center right m" id="4" style="color:#FFFFFF; background-color:#88888800" >
+                <div id="myProgress">
+                    <div id="myBar"></div>
+                </div>
+                <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+            </div>
+        </div>
+        <div class="sketchfab" id="3">
+            <iframe id="sketch3" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="subtext center right m" id="4" style="color:#FFFFFF; background-color:#88888800">
 			<span style='width: 100%'>
 				You are the first person who has entered this tomb after 10.000 years of silence
 			</span>
-			</div>
-			<div class="subtext center right m" id="5" style="color:#FFFFFF; background-color:#88888800" >
+        </div>
+        <div class="subtext center right m" id="5" style="color:#FFFFFF; background-color:#88888800">
 			<span style='width: 100%'>
 				Immediately after entering the lights turned on
 			</span>
-			</div>
-			<div class="subtext center right m" id="7" style="color:#FFFFFF; background-color:#88888800" >
+        </div>
+        <div class="subtext center right m" id="7" style="color:#FFFFFF; background-color:#88888800">
 			<span style='width: 100%'>
 				You enter a big room with two doors
 			</span>
-			</div>
-			<div class="headinger" id="8">
-<div>Do you want to go left or right?</div>
-			<div style="margin-top: 50px">				
-<input type="radio" id="question8:Left" name="question8" value="Left"checked>
-				<label for="question8:Left">Left</label>				
-<input type="radio" id="question8:Right" name="question8" value="Right">
-				<label for="question8:Right">Right</label>
-</div>
-</div>
-<div class="sketchfab" id="26">
-   <iframe id="sketch26" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-			<div class="subtext center right m" id="28" style="color:#FFFFFF; background-color:#88888800" >
+        </div>
+        <div class="headinger" id="8">
+            <div>Do you want to go left or right?</div>
+            <div style="margin-top: 50px">
+                <input type="radio" id="question8:Left" name="question8" value="Left" checked>
+                <label for="question8:Left">Left</label>
+                <input type="radio" id="question8:Right" name="question8" value="Right">
+                <label for="question8:Right">Right</label>
+            </div>
+        </div>
+        <div class="sketchfab" id="26">
+            <iframe id="sketch26" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="subtext center right m" id="28" style="color:#FFFFFF; background-color:#88888800">
 			<span style='width: 100%'>
 				You chose the right path to pursue
 			</span>
-			</div>
-			<div class="subtext center right m" id="14" style="color:#FFFFFF; background-color:#88888800" >
+        </div>
+        <div class="subtext center right m" id="14" style="color:#FFFFFF; background-color:#88888800">
 			<span style='width: 100%'>
 				You entered a bigh hall, you have to decide where you would like to head now
 			</span>
-			</div>
-			<div class="headinger" id="15">
-<div>Which way do you want to go?</div>
-			<div style="margin-top: 50px">				
-<input type="radio" id="question15:Left" name="question15" value="Left"checked>
-				<label for="question15:Left">Left</label>				
-<input type="radio" id="question15:Straight" name="question15" value="Straight">
-				<label for="question15:Straight">Straight</label>				
-<input type="radio" id="question15:Right" name="question15" value="Right">
-				<label for="question15:Right">Right</label>
-</div>
-</div>
-<div class="sketchfab" id="30">
-   <iframe id="sketch30" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-<div class="imageFullscreen left" id="20">
-<img src="./data/20_monster-squad-1987-mummy.jpg"/></div>
-<div class="sketchfab" id="31">
-   <iframe id="sketch31" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-<div class="imageFullscreen left" id="22">
-<img src="./data/22_0 LXaqE2Jb1EcxmSgO.jpg"/></div>
-<div class="sketchfab" id="17">
-   <iframe id="sketch17" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-<div class="imageFullscreen left" id="32">
-<img src="./data/32_treasures-of-egypt-andrew-farley.jpg"/></div>
-			<div class="subtext center right m" id="24" style="color:#FFFFFF; background-color:#88888855" >
+        </div>
+        <div class="headinger" id="15">
+            <div>Which way do you want to go?</div>
+            <div style="margin-top: 50px">
+                <input type="radio" id="question15:Left" name="question15" value="Left" checked>
+                <label for="question15:Left">Left</label>
+                <input type="radio" id="question15:Straight" name="question15" value="Straight">
+                <label for="question15:Straight">Straight</label>
+                <input type="radio" id="question15:Right" name="question15" value="Right">
+                <label for="question15:Right">Right</label>
+            </div>
+        </div>
+        <div class="sketchfab" id="30">
+            <iframe id="sketch30" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="imageFullscreen left" id="20">
+            <img src="./data/20_monster-squad-1987-mummy.jpg"/></div>
+        <div class="sketchfab" id="31">
+            <iframe id="sketch31" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="imageFullscreen left" id="22">
+            <img src="./data/22_0 LXaqE2Jb1EcxmSgO.jpg"/></div>
+        <div class="sketchfab" id="17">
+            <iframe id="sketch17" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="imageFullscreen left" id="32">
+            <img src="./data/32_treasures-of-egypt-andrew-farley.jpg"/></div>
+        <div class="subtext center right m" id="24" style="color:#FFFFFF; background-color:#88888855">
 			<span style='width: 100%'>
 				You found the treasure of Anubis!
 			</span>
-			</div>
-			<div class="text m" id="25" style="color:#FFFFFF; background-color:#00000000" >
+        </div>
+        <div class="text m" id="25" style="color:#FFFFFF; background-color:#00000000">
 <span>
 Well done!
 </span></div>
-<div class="sketchfab" id="27">
-   <iframe id="sketch27" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-<div class="imageFullscreen left" id="11">
-<img src="./data/11__114502505_hi063242284.jpg"/></div>
-			<div class="subtext center right m" id="12" style="color:#FFFFFF; background-color:#88888855" >
+        <div class="sketchfab" id="27">
+            <iframe id="sketch27" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="imageFullscreen left" id="11">
+            <img src="./data/11__114502505_hi063242284.jpg"/></div>
+        <div class="subtext center right m" id="12" style="color:#FFFFFF; background-color:#88888855">
 			<span style='width: 100%'>
 				You found a Sarkophag, we shouldn't disturb the silence of the death
 			</span>
-			</div>
+        </div>
         <div class="treeHolder">
             <div class="tree">
-                 <ul>
+                <ul>
                     <li>
                         <div class="circle active" id="c2"><i class="fas fa-play fa-xs treeIcon"></i></div>
-                   <ul>
+                        <ul>
                             <li>
                                 <div class="circle" id="c3"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
-                   <ul>
+                        <ul>
                             <li>
                                 <div class="circle" id="c6"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
-<ul><li>                             <div class="circle" id="c8"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
-
-<ul><li>                             <div class="circle" id="c26"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                   <ul>
+                        <ul>
                             <li>
-                                <div class="circle" id="c29"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                <div class="circle" id="c8"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
+
+                                <ul>
+                                    <li>
+                                        <div class="circle" id="c26"><i
+                                                class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                        <ul>
+                                            <li>
+                                                <div class="circle" id="c29"><i
+                                                        class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                            </li>
+                                        </ul>
+
+                                        <ul>
+                                            <li>
+                                                <div class="circle" id="c13"><i
+                                                        class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                            </li>
+                                        </ul>
+
+                                        <ul>
+                                            <li>
+                                                <div class="circle" id="c15"><i
+                                                        class="fas fa-share-alt fa-xs treeIcon"></i></div>
+
+                                                <ul>
+                                                    <li>
+                                                        <div class="circle" id="c30"><i
+                                                                class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="circle" id="c16"><i
+                                                                        class="fas fa-brands fa-unity fa-xs treeIcon"></i>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                    </li>
+                                                    <li>
+                                                        <div class="circle" id="c17"><i
+                                                                class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="circle" id="c23"><i
+                                                                        class="fas fa-brands fa-unity fa-xs treeIcon"></i>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                        <ul>
+                                                            <li>
+                                                                <div class="circle" id="c25"><i
+                                                                        class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                    </li>
+                                                    <li>
+                                                        <div class="circle" id="c31"><i
+                                                                class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="circle" id="c18"><i
+                                                                        class="fas fa-brands fa-unity fa-xs treeIcon"></i>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="circle" id="c27"><i
+                                                class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                        <ul>
+                                            <li>
+                                                <div class="circle" id="c10"><i
+                                                        class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-                   <ul>
-                            <li>
-                                <div class="circle" id="c13"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-<ul><li>                             <div class="circle" id="c15"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
-
-<ul><li>                             <div class="circle" id="c30"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                   <ul>
-                            <li>
-                                <div class="circle" id="c16"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-</li><li>                             <div class="circle" id="c17"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                   <ul>
-                            <li>
-                                <div class="circle" id="c23"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-                   <ul>
-                            <li>
-                                <div class="circle" id="c25"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-</li><li>                             <div class="circle" id="c31"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                   <ul>
-                            <li>
-                                <div class="circle" id="c18"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-</li></li></ul>
-</li><li>                             <div class="circle" id="c27"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                   <ul>
-                            <li>
-                                <div class="circle" id="c10"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-</li></li></ul>
-                 </li>
-            </ul>
-
-           </div></div>
-
-</div>
+    </div>
 </main>
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/mapCode.js"></script>
