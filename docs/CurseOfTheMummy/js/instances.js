@@ -77,7 +77,9 @@ export function getInstances(camera){
     once[4] = false;
     instances[4] = (p) => {
         if (p <= 0) {
+            if(document.getElementById("c6") !== null) document.getElementById("c6").classList.remove("active");
         } else {
+            if(document.getElementById("c6") !== null) document.getElementById("c6").classList.add("active");
             if (p< 1) SKETCHFAB.sketch6Behaviour(p);
         }
         if (p === 1 && !once[4]) {
@@ -154,7 +156,9 @@ export function getInstances(camera){
     once[24] = false;
     instances[24] = (p) => {
         if (p <= 0) {
+            if(document.getElementById("c29") !== null) document.getElementById("c29").classList.remove("active");
         } else {
+            if(document.getElementById("c29") !== null) document.getElementById("c29").classList.add("active");
             if (p< 1) SKETCHFAB.sketch29Behaviour(p);
         }
         if (p === 1 && !once[24]) {
@@ -184,7 +188,9 @@ export function getInstances(camera){
     once[10] = false;
     instances[10] = (p) => {
         if (p <= 0) {
+            if(document.getElementById("c13") !== null) document.getElementById("c13").classList.remove("active");
         } else {
+            if(document.getElementById("c13") !== null) document.getElementById("c13").classList.add("active");
             if (p< 1) SKETCHFAB.sketch13Behaviour(p);
         }
         if (p === 1 && !once[10]) {
@@ -265,7 +271,9 @@ export function getInstances(camera){
     once[13] = false;
     instances[13] = (p) => {
         if (p <= 0) {
+            if(document.getElementById("c16") !== null) document.getElementById("c16").classList.remove("active");
         } else {
+            if(document.getElementById("c16") !== null) document.getElementById("c16").classList.add("active");
             if (p< 1) SKETCHFAB.sketch16Behaviour(p);
         }
         if (p === 1 && !once[13]) {
@@ -323,7 +331,9 @@ export function getInstances(camera){
     once[18] = false;
     instances[18] = (p) => {
         if (p <= 0) {
+            if(document.getElementById("c23") !== null) document.getElementById("c23").classList.remove("active");
         } else {
+            if(document.getElementById("c23") !== null) document.getElementById("c23").classList.add("active");
             if (p< 1) SKETCHFAB.sketch23Behaviour(p);
         }
         if (p === 1 && !once[18]) {
@@ -407,7 +417,9 @@ export function getInstances(camera){
     once[15] = false;
     instances[15] = (p) => {
         if (p <= 0) {
+            if(document.getElementById("c18") !== null) document.getElementById("c18").classList.remove("active");
         } else {
+            if(document.getElementById("c18") !== null) document.getElementById("c18").classList.add("active");
             if (p< 1) SKETCHFAB.sketch18Behaviour(p);
         }
         if (p === 1 && !once[15]) {
@@ -455,7 +467,9 @@ export function getInstances(camera){
     once[7] = false;
     instances[7] = (p) => {
         if (p <= 0) {
+            if(document.getElementById("c10") !== null) document.getElementById("c10").classList.remove("active");
         } else {
+            if(document.getElementById("c10") !== null) document.getElementById("c10").classList.add("active");
             if (p< 1) SKETCHFAB.sketch10Behaviour(p);
         }
         if (p === 1 && !once[7]) {
