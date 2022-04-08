@@ -2,213 +2,304 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/tree.css" />
+    <!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/tree.css"/>
     <script type="text/javascript" src="./js/nifti-reader.js"></script>
     <script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script>
     <script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script>
-   <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
-   <script type="module" src="./js/volume-render.js"></script>
-   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-   <script type="text/javascript" src="js/sketchfab-viewer-1.12.0.js"></script>
+    <script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script>
+    <script type="module" src="./js/volume-render.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script type="text/javascript" src="js/sketchfab-viewer-1.12.0.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-   <script type="text/javascript" src="./js/videoCode.js"></script>
-   </head>
-    <body>
- <main>
-<div class="content content--canvas">
-			<div class="header" id="2">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
+    <script type="text/javascript" src="./js/videoCode.js"></script>
+</head>
+<body>
+<main>
+    <div class="content content--canvas">
+        <div class="header" id="2">
             <h1 class="header__title">The Hip Bone</h1>
             <p class="header__text">A ScrolylVis story</p>
             <div id="progressContainer">
-              <div id="myProgress">
-              <div id="myBar"></div>
-             </div>
-              <div id="done" style="margin-left: 40%; opacity: 0">done</div>
-              </div>        </div>
-<div class="sketchfab" id="4">
-   <iframe id="sketch4" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-			<div class="headinger" id="6">
-<div>Which structure is presented by number 1?</div>
-			<div style="margin-top: 50px">				
-<input type="radio" id="question6:Ilium" name="question6" value="Ilium"checked>
-				<label for="question6:Ilium">Ilium</label>				
-<input type="radio" id="question6:Ischium" name="question6" value="Ischium">
-				<label for="question6:Ischium">Ischium</label>				
-<input type="radio" id="question6:Pubis" name="question6" value="Pubis">
-				<label for="question6:Pubis">Pubis</label>
-</div>
-</div>
-			<div class="text m" id="13" style="color:#FFFFFF; background-color:#00000000" >
+                <div id="myProgress">
+                    <div id="myBar"></div>
+                </div>
+                <div id="done" style="margin-left: 40%; opacity: 0">done</div>
+            </div>
+        </div>
+        <div class="sketchfab" id="4">
+            <iframe id="sketch4" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="headinger" id="6">
+            <div>Which structure is presented by number 1?</div>
+            <div style="margin-top: 50px">
+                <input type="radio" id="question6:Ilium" name="question6" value="Ilium" checked>
+                <label for="question6:Ilium">Ilium</label>
+                <input type="radio" id="question6:Ischium" name="question6" value="Ischium">
+                <label for="question6:Ischium">Ischium</label>
+                <input type="radio" id="question6:Pubis" name="question6" value="Pubis">
+                <label for="question6:Pubis">Pubis</label>
+            </div>
+        </div>
+        <div class="text m" id="13" style="color:#FFFFFF; background-color:#00000000">
 <span>
 This is correct 🤩
 </span></div>
-<div class="sketchfab" id="14">
-   <iframe id="sketch14" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-			<div class="headinger" id="16">
-<div>What about number 2?</div>
-			<div style="margin-top: 50px">				
-<input type="radio" id="question16:Illiac Crest" name="question16" value="Illiac Crest"checked>
-				<label for="question16:Illiac Crest">Illiac Crest</label>				
-<input type="radio" id="question16:Greater Sciatic Notch" name="question16" value="Greater Sciatic Notch">
-				<label for="question16:Greater Sciatic Notch">Greater Sciatic Notch</label>				
-<input type="radio" id="question16:Anterior Inferior Illiac Spine" name="question16" value="Anterior Inferior Illiac Spine">
-				<label for="question16:Anterior Inferior Illiac Spine">Anterior Inferior Illiac Spine</label>
-</div>
-</div>
-			<div class="text m" id="17" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="sketchfab" id="14">
+            <iframe id="sketch14" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="headinger" id="16">
+            <div>What about number 2?</div>
+            <div style="margin-top: 50px">
+                <input type="radio" id="question16:Illiac Crest" name="question16" value="Illiac Crest" checked>
+                <label for="question16:Illiac Crest">Illiac Crest</label>
+                <input type="radio" id="question16:Greater Sciatic Notch" name="question16"
+                       value="Greater Sciatic Notch">
+                <label for="question16:Greater Sciatic Notch">Greater Sciatic Notch</label>
+                <input type="radio" id="question16:Anterior Inferior Illiac Spine" name="question16"
+                       value="Anterior Inferior Illiac Spine">
+                <label for="question16:Anterior Inferior Illiac Spine">Anterior Inferior Illiac Spine</label>
+            </div>
+        </div>
+        <div class="text m" id="17" style="color:#FFFFFF; background-color:#00000000">
 <span>
 Unfortunately this is wrong ☹  
 </span></div>
-			<div class="text m" id="19" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="19" style="color:#FFFFFF; background-color:#00000000">
 <span>
 Unfortunately this is wrong ☹  
 </span></div>
-			<div class="text m" id="18" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="18" style="color:#FFFFFF; background-color:#00000000">
 <span>
 This is correct 🤩
 </span></div>
-<div class="sketchfab" id="20">
-   <iframe id="sketch20" allow="autoplay; fullscreen; xr-spatial-tracking"    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
-</div>
-			<div class="headinger" id="22">
-<div>Last but not least structure 4?</div>
-			<div style="margin-top: 50px">				
-<input type="radio" id="question22:Auricular Surface" name="question22" value="Auricular Surface"checked>
-				<label for="question22:Auricular Surface">Auricular Surface</label>				
-<input type="radio" id="question22:Illiac Crest" name="question22" value="Illiac Crest">
-				<label for="question22:Illiac Crest">Illiac Crest</label>				
-<input type="radio" id="question22:Posterior Superior Illiac Spine" name="question22" value="Posterior Superior Illiac Spine">
-				<label for="question22:Posterior Superior Illiac Spine">Posterior Superior Illiac Spine</label>
-</div>
-</div>
-			<div class="text m" id="23" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="sketchfab" id="20">
+            <iframe id="sketch20" allow="autoplay; fullscreen; xr-spatial-tracking"
+                    style="height: 100%; width: 100%; z-index: 0; border: none"></iframe>
+        </div>
+        <div class="headinger" id="22">
+            <div>Last but not least structure 4?</div>
+            <div style="margin-top: 50px">
+                <input type="radio" id="question22:Auricular Surface" name="question22" value="Auricular Surface"
+                       checked>
+                <label for="question22:Auricular Surface">Auricular Surface</label>
+                <input type="radio" id="question22:Illiac Crest" name="question22" value="Illiac Crest">
+                <label for="question22:Illiac Crest">Illiac Crest</label>
+                <input type="radio" id="question22:Posterior Superior Illiac Spine" name="question22"
+                       value="Posterior Superior Illiac Spine">
+                <label for="question22:Posterior Superior Illiac Spine">Posterior Superior Illiac Spine</label>
+            </div>
+        </div>
+        <div class="text m" id="23" style="color:#FFFFFF; background-color:#00000000">
 <span>
 No, try again 🤔
 </span></div>
-			<div class="text m" id="25" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="25" style="color:#FFFFFF; background-color:#00000000">
 <span>
 Absolutely right! 🤩
 </span></div>
-			<div class="headinger" id="26">
-<div>How many did you have wright?</div>
-			<div style="margin-top: 50px">				
-<input type="radio" id="question26:0" name="question26" value="0"checked>
-				<label for="question26:0">0</label>				
-<input type="radio" id="question26:1" name="question26" value="1">
-				<label for="question26:1">1</label>				
-<input type="radio" id="question26:2" name="question26" value="2">
-				<label for="question26:2">2</label>				
-<input type="radio" id="question26:3" name="question26" value="3">
-				<label for="question26:3">3</label>
-</div>
-</div>
-			<div class="text m" id="27" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="headinger" id="26">
+            <div>How many did you have wright?</div>
+            <div style="margin-top: 50px">
+                <input type="radio" id="question26:0" name="question26" value="0" checked>
+                <label for="question26:0">0</label>
+                <input type="radio" id="question26:1" name="question26" value="1">
+                <label for="question26:1">1</label>
+                <input type="radio" id="question26:2" name="question26" value="2">
+                <label for="question26:2">2</label>
+                <input type="radio" id="question26:3" name="question26" value="3">
+                <label for="question26:3">3</label>
+            </div>
+        </div>
+        <div class="text m" id="27" style="color:#FFFFFF; background-color:#00000000">
 <span>
 That's ok, you are here to learn! 😊
 </span></div>
-			<div class="text m" id="30" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="30" style="color:#FFFFFF; background-color:#00000000">
 <span>
 You did a great job! 🤩
 </span></div>
-			<div class="text m" id="29" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="29" style="color:#FFFFFF; background-color:#00000000">
 <span>
 Almost there! 😉
 </span></div>
-			<div class="text m" id="28" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="28" style="color:#FFFFFF; background-color:#00000000">
 <span>
 You are on the right path! 🤗
 </span></div>
-			<div class="text m" id="24" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="24" style="color:#FFFFFF; background-color:#00000000">
 <span>
 No, unfortunately not correct 🙁
 </span></div>
-			<div class="text m" id="12" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="12" style="color:#FFFFFF; background-color:#00000000">
 <span>
 Unfortunately this is wrong. ☹
 </span></div>
-			<div class="text m" id="10" style="color:#FFFFFF; background-color:#00000000" >
+        <div class="text m" id="10" style="color:#FFFFFF; background-color:#00000000">
 <span>
 Unfortunately this is wrong ☹  
 </span></div>
         <div class="treeHolder">
             <div class="tree">
-                 <ul>
+                <ul>
                     <li>
                         <div class="circle active" id="c2"><i class="fas fa-play fa-xs treeIcon"></i></div>
-                   <ul>
+                        <ul>
                             <li>
-                                <div class="circle" id="c4"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                <div class="circle" id="c4"><i class="fas fa-cube fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
-                   <ul>
+                        <ul>
                             <li>
-                                <div class="circle" id="c5"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                <div class="circle" id="c5"><i class="fas fa-cube fa-xs treeIcon"></i></div>
                             </li>
                         </ul>
 
-<ul><li>                             <div class="circle" id="c6"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
-
-<ul><li>                             <div class="circle" id="c13"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-                   <ul>
+                        <ul>
                             <li>
-                                <div class="circle" id="c14"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
+                                <div class="circle" id="c6"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
+                                <ul>
+                                    <li>
+                                        <div class="circle" id="c13"><i class="fas fa-paragraph fa-xs treeIcon"></i>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="circle" id="c14"><i
+                                                        class="fas fa-cube fa-xs treeIcon"></i></div>
+                                            </li>
+                                        </ul>
+
+                                        <ul>
+                                            <li>
+                                                <div class="circle" id="c15"><i
+                                                        class="fas fa-cube fa-xs treeIcon"></i></div>
+                                            </li>
+                                        </ul>
+
+                                        <ul>
+                                            <li>
+                                                <div class="circle" id="c16"><i
+                                                        class="fas fa-share-alt fa-xs treeIcon"></i></div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="circle" id="c17"><i
+                                                                class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                                                    </li>
+
+
+                                                    <li>
+                                                        <div class="circle" id="c19"><i
+                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li>
+                                                        <div class="circle" id="c18"><i
+                                                                class="fas fa-paragraph fa-xs treeIcon"></i></div>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="circle" id="c20"><i
+                                                                        class="fas fa-cube fa-xs treeIcon"></i>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                        <ul>
+                                                            <li>
+                                                                <div class="circle" id="c21"><i
+                                                                        class="fas fa-cube fa-xs treeIcon"></i>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                        <ul>
+                                                            <li>
+                                                                <div class="circle" id="c22"><i
+                                                                        class="fas fa-share-alt fa-xs treeIcon"></i>
+                                                                </div>
+
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="circle" id="c23"><i
+                                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="circle" id="c24"><i
+                                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="circle" id="c25"><i
+                                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                        </div>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="circle" id="c26"><i
+                                                                                        class="fas fa-share-alt fa-xs treeIcon"></i>
+                                                                                </div>
+
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <div class="circle" id="c27"><i
+                                                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="circle" id="c28"><i
+                                                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="circle" id="c29"><i
+                                                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="circle" id="c30"><i
+                                                                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="circle" id="c10"><i
+                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="circle" id="c12"><i
+                                                class="fas fa-paragraph fa-xs treeIcon"></i>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-                   <ul>
-                            <li>
-                                <div class="circle" id="c15"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-<ul><li>                             <div class="circle" id="c16"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
-
-<ul><li>                             <div class="circle" id="c17"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li><li>                             <div class="circle" id="c18"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-                   <ul>
-                            <li>
-                                <div class="circle" id="c20"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-                   <ul>
-                            <li>
-                                <div class="circle" id="c21"><i class="fas fa-brands fa-unity fa-xs treeIcon"></i></div>
-                            </li>
-                        </ul>
-
-<ul><li>                             <div class="circle" id="c22"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
-
-<ul><li>                             <div class="circle" id="c23"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li><li>                             <div class="circle" id="c24"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li><li>                             <div class="circle" id="c25"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-<ul><li>                             <div class="circle" id="c26"><i class="fas fa-share-alt fa-xs treeIcon"></i></div>
-
-<ul><li>                             <div class="circle" id="c27"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li><li>                             <div class="circle" id="c28"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li><li>                             <div class="circle" id="c29"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li><li>                             <div class="circle" id="c30"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li></li></ul>
-</li></li></ul>
-</li><li>                             <div class="circle" id="c19"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li></li></ul>
-</li><li>                             <div class="circle" id="c10"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li><li>                             <div class="circle" id="c12"><i class="fas fa-paragraph fa-xs treeIcon"></i></div>
-</li></li></ul>
-                 </li>
-            </ul>
-
-           </div></div>
-
-</div>
+    </div>
 </main>
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/mapCode.js"></script>
